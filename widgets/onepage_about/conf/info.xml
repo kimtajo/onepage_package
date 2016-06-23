@@ -79,20 +79,6 @@
 			    <name xml:lang="zh-TW">內容字數</name>
 			    <name xml:lang="tr">İçerik Uzunluğu</name>
 		    </var>
-		    <var id="new_window" type="select">
-			    <name xml:lang="ko">링크</name>
-			    <name xml:lang="en">Link</name>
-			    <options>
-				    <value></value>
-				    <name xml:lang="ko">현재창에서 열기</name>
-				    <name xml:lang="en">Open in current window</name>
-			    </options>
-			    <options>
-				    <value>Y</value>
-				    <name xml:lang="ko">새창에서 열기</name>
-				    <name xml:lang="en">Open in new window</name>
-			    </options>
-		    </var>
 	    </group>
 	    <group>
 		    <title xml:lang="ko">About 위젯 버튼 설정</title>

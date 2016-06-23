@@ -21,7 +21,6 @@ class onepage_about extends WidgetHandler
 		if(!in_array($args->order_target, array('regdate','update_order'))) $args->order_target = 'regdate';
 		// Sort order
 		if(!in_array($args->order_type, array('asc','desc'))) $args->order_type = 'desc';
-
 		// Cut the length of the title
 		if(!$args->subject_cut_size) $args->subject_cut_size = 0;
 		// Cut the length of contents

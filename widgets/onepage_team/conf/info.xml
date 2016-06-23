@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget version="0.2">
     <title xml:lang="ko">Onepage Team 위젯</title>
+	<description xml:lang="ko">게시판 생성하고, 게시판 설정의 사용자 정의 탭에서 사용자 정의 이름을 sub_title을 하나 만들어준 후 사용합니다.</description>
     <version>1.00</version>
     <date>2016-06-27</date>
     <author email_address="jjrrtt@naver.com" link="http://kimtajo.net/">
@@ -79,101 +80,117 @@
 			    <name xml:lang="zh-TW">內容字數</name>
 			    <name xml:lang="tr">İçerik Uzunluğu</name>
 		    </var>
-		    <var id="new_window" type="select">
-			    <name xml:lang="ko">링크</name>
-			    <name xml:lang="en">Link</name>
-			    <options>
-				    <value></value>
-				    <name xml:lang="ko">현재창에서 열기</name>
-				    <name xml:lang="en">Open in current window</name>
-			    </options>
-			    <options>
-				    <value>Y</value>
-				    <name xml:lang="ko">새창에서 열기</name>
-				    <name xml:lang="en">Open in new window</name>
-			    </options>
+		    <var id="list_count" type="text">
+			    <name xml:lang="ko">목록수</name>
+			    <name xml:lang="zh-CN">目录数</name>
+			    <name xml:lang="jp">リスト数</name>
+			    <name xml:lang="en">Number of Lists</name>
+			    <name xml:lang="vi">Số bài hiển thị</name>
+			    <name xml:lang="es">Número de la lista</name>
+			    <name xml:lang="ru">Число списка</name>
+			    <name xml:lang="zh-TW">目錄數</name>
+			    <name xml:lang="tr">Liste Sayısı</name>
+			    <description xml:lang="ko">출력될 목록의 수를 정할 수 있습니다. (기본 3개)</description>
+			    <description xml:lang="zh-CN">可设置要显示的目录数。 (默认为3个)</description>
+			    <description xml:lang="jp">出力するリスト数を指定します（デフォルト3個）。</description>
+			    <description xml:lang="en">You can set the number of articles to be displayed. (default is 3)</description>
+			    <description xml:lang="vi">Bạn có thể đặt số bài hiển thị. (Mặc định là 3)</description>
+			    <description xml:lang="es">Usted puede definir el número de los documentos a mostrar. (predefinido: 3)</description>
+			    <description xml:lang="ru">Вы можете выбрать число списка (стандарт: 3)</description>
+			    <description xml:lang="zh-TW">設置要顯示的目錄數。(預設是3個)</description>
+			    <description xml:lang="tr">Görüntülenecek yazıların sayısını ayarlayabilirsiniz. (varsayılan değer 3'tir)</description>
 		    </var>
 	    </group>
 	    <group>
-		    <title xml:lang="ko">About 위젯 버튼 설정</title>
-		    <var name="use_about_button" type="select">
-			    <title xml:lang="ko">버튼 사용 여부</title>
-			    <options>
-				    <value>Y</value>
-				    <name xml:lang="ko">사용</name>
-			    </options>
-			    <options>
-				    <value>N</value>
-				    <name xml:lang="ko">미사용</name>
-			    </options>
-		    </var>
-		    <var name="about_button_name" type="text">
-			    <title xml:lang="ko">버튼 이름</title>
-		    </var>
-		    <var name="about_button_link" type="text">
-			    <title xml:lang="ko">버튼 링크</title>
-		    </var>
-		    <var id="about_button_new_window" type="select">
-			    <name xml:lang="ko">링크</name>
-			    <name xml:lang="en">Link</name>
-			    <options>
-				    <value></value>
-				    <name xml:lang="ko">현재창에서 열기</name>
-				    <name xml:lang="en">Open in current window</name>
-			    </options>
-			    <options>
-				    <value>Y</value>
-				    <name xml:lang="ko">새창에서 열기</name>
-				    <name xml:lang="en">Open in new window</name>
-			    </options>
-		    </var>
-	    </group>
-<!--
-	    <group>
-		    <title xml:lang="ko">About 위젯 설정</title>
-		    <var name="about_image" type="text">
-			    <title xml:lang="ko">이미지</title>
-			    <description xml:lang="ko">이미지 url을 등록합니다.</description>
-		    </var>
-		    <var name="about_image_title" type="text">
-			    <title xml:lang="ko">이미지 소개 제목</title>
-			    <description xml:lang="ko">이미지를 소개할 제목을 입력합니다.</description>
-		    </var>
-		    <var name="about_image_content" type="textarea">
-			    <title xml:lang="ko">서브 1 이미지 소개 내용</title>
-			    <description xml:lang="ko">이미지를 소개할 내용을 입력합니다.(html 태그 적용가능, br 태그는 엔터로 입력)</description>
-		    </var>
-		    <var name="use_about_button" type="select">
-			    <title xml:lang="ko">서브 1 버튼 사용 여부</title>
-			    <options>
-				    <value>Y</value>
-				    <name xml:lang="ko">사용</name>
-			    </options>
-			    <options>
-				    <value>N</value>
-				    <name xml:lang="ko">미사용</name>
-			    </options>
-		    </var>
-		    <var name="about_button_name" type="text">
-			    <title xml:lang="ko">서브 1 버튼 이름</title>
-		    </var>
-		    <var name="about_button_link" type="text">
-			    <title xml:lang="ko">서브 1 버튼 링크</title>
-		    </var>
-		    <var id="about_button_new_window" type="select">
-			    <name xml:lang="ko">링크</name>
-			    <name xml:lang="en">Link</name>
-			    <options>
-				    <value></value>
-				    <name xml:lang="ko">현재창에서 열기</name>
-				    <name xml:lang="en">Open in current window</name>
-			    </options>
-			    <options>
-				    <value>Y</value>
-				    <name xml:lang="ko">새창에서 열기</name>
-				    <name xml:lang="en">Open in new window</name>
-			    </options>
-		    </var>
-	    </group>-->
+	    <title xml:lang="ko">정렬</title>
+	    <var id="order_target" type="select">
+		    <name xml:lang="ko">정렬 대상</name>
+		    <name xml:lang="zh-CN">排序对象</name>
+		    <name xml:lang="jp">ソート対象</name>
+		    <name xml:lang="en">Target to be sorted</name>
+		    <name xml:lang="vi">Phân loại</name>
+		    <name xml:lang="es">Objetivo para ser ordenados</name>
+		    <name xml:lang="ru">Предмет для сортировки</name>
+		    <name xml:lang="zh-TW">排列順序</name>
+		    <name xml:lang="tr">Sıralanacak Hedef</name>
+		    <description xml:lang="ko">등록된 순서 또는 변경된 순서로 정렬을 할 수 있습니다.</description>
+		    <description xml:lang="zh-CN">可以按照指定的顺序进行排序。</description>
+		    <description xml:lang="jp">登録順、または変更順にソートします。</description>
+		    <description xml:lang="en">The list of newewst articles may be sorted by submitted order or modified order.</description>
+		    <description xml:lang="vi">Danh sách bài viết mới nhất có thể được được phân loại bởi danh sách đã gửi hay đã sửa.</description>
+		    <description xml:lang="es">La lista de los documentos recientes pueden ser ordenados en el orden del agregado o en el de modificados.</description>
+		    <description xml:lang="ru">Список последних статей может быть отсортирован по дате размещения или изменения.</description>
+		    <description xml:lang="zh-TW">按照指定的順序進行排列。</description>
+		    <description xml:lang="tr">En yeni yazıların listesi, teslim edilme sırasına veya değişiklik sırasına göre sıralanabilir.</description>
+		    <options>
+			    <value>regdate</value>
+			    <name xml:lang="ko">최신 등록순</name>
+			    <name xml:lang="zh-CN">最新发表顺</name>
+			    <name xml:lang="jp">最新登録順</name>
+			    <name xml:lang="en">Newest Submitted Order</name>
+			    <name xml:lang="vi">Bài mới gửi</name>
+			    <name xml:lang="es">Orden de agregados recientemente</name>
+			    <name xml:lang="ru">Порядок последних записей</name>
+			    <name xml:lang="zh-TW">最新發表</name>
+			    <name xml:lang="tr">En yeni gönderim sırası</name>
+		    </options>
+		    <options>
+			    <value>update_order</value>
+			    <name xml:lang="ko">최근 변경순</name>
+			    <name xml:lang="zh-CN">最新修改顺</name>
+			    <name xml:lang="jp">最新変更順</name>
+			    <name xml:lang="en">Newest Modified Order</name>
+			    <name xml:lang="vi">Bài mới sửa</name>
+			    <name xml:lang="es">Orden de modificados recientemente</name>
+			    <name xml:lang="ru">Порядок последних измененных записей</name>
+			    <name xml:lang="zh-TW">最新修改</name>
+			    <name xml:lang="tr">En yeni değiştirilme sırası</name>
+		    </options>
+	    </var>
+	    <var id="order_type" type="select">
+		    <name xml:lang="ko">정렬 방법</name>
+		    <name xml:lang="zh-CN">排序方式</name>
+		    <name xml:lang="jp">ソートタイプ</name>
+		    <name xml:lang="en">Sorting Type</name>
+		    <name xml:lang="vi">Kiểu sắp xếp</name>
+		    <name xml:lang="es">Tipo de ordenamiento</name>
+		    <name xml:lang="ru">Тип сортировки</name>
+		    <name xml:lang="zh-TW">排列方式</name>
+		    <name xml:lang="tr">Sıralama Tipi</name>
+		    <description xml:lang="ko">정렬대상을 내림차순 또는 올림차순으로 정렬할 수 있습니다.</description>
+		    <description xml:lang="zh-CN">对其排序对象可进行升序/降序方式排序。</description>
+		    <description xml:lang="jp">ソートタイプを、降順、または昇順に設定します。</description>
+		    <description xml:lang="en">You can sort target articles in ascending or descending order.</description>
+		    <description xml:lang="vi">Bạn có thể phân loại bài viết theo kiểu tăng hay giảm.</description>
+		    <description xml:lang="es">Usted puede ordenar los documentos en orden acendente o en orden descendente.</description>
+		    <description xml:lang="ru">Вы можете сортировать статьи в порядке возрастания или убывания.</description>
+		    <description xml:lang="zh-TW">可選擇升冪/降冪的方式對所選目標進行排列。</description>
+		    <description xml:lang="tr">Hedef yazıları artan veya azalan sırasına göre sıralayabilirsiniz.</description>
+		    <options>
+			    <value>desc</value>
+			    <name xml:lang="ko">내림차순</name>
+			    <name xml:lang="zh-CN">降序</name>
+			    <name xml:lang="jp">降順</name>
+			    <name xml:lang="en">Descending order</name>
+			    <name xml:lang="vi">Giảm dần</name>
+			    <name xml:lang="es">Orden Descendente</name>
+			    <name xml:lang="ru">По убыванию</name>
+			    <name xml:lang="zh-TW">降冪</name>
+			    <name xml:lang="tr">Azalan sıra</name>
+		    </options>
+		    <options>
+			    <value>asc</value>
+			    <name xml:lang="ko">올림차순</name>
+			    <name xml:lang="zh-CN">升序</name>
+			    <name xml:lang="jp">昇順</name>
+			    <name xml:lang="en">Ascending order</name>
+			    <name xml:lang="vi">Tăng dần</name>
+			    <name xml:lang="es">Orden Acendente</name>
+			    <name xml:lang="ru">По возрастанию</name>
+			    <name xml:lang="zh-TW">升冪</name>
+			    <name xml:lang="tr">Artan sıra</name>
+		    </options>
+	    </var>
+    </group>
     </extra_vars>
 </widget>
