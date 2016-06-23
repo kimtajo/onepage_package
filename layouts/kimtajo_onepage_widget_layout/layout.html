@@ -171,8 +171,8 @@
 					<!--@if($nav_info != '')-->
 						<!--@foreach($nav_info as $nav)-->
 						{@ $split_nav = explode("||", $nav)}
-						{@ $title = $split_nav[0]}
-						{@ $section = $split_nav[1]}
+						{@ $title = trim($split_nav[0])}
+						{@ $section = trim($split_nav[1])}
 						<li><a href="#" data-nav-section="{$section}"><span>{$title}</span></a></li>
 						<!--@end-->
 					<!--@end-->

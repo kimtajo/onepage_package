@@ -102,7 +102,7 @@
             </var>
             <var id="new_window" type="select">
                 <name xml:lang="ko">링크</name>
-                <name xml:lang="en">Like</name>
+                <name xml:lang="en">Link</name>
 				<options>
 					<value></value>
 					<name xml:lang="ko">현재창에서 열기</name>

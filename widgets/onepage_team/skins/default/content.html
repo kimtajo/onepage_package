@@ -1,0 +1,32 @@
+<div class="fh5co-about-us" data-section="{$widget_info->section_name}" style="background-color: {$widget_info->section_background_color};"|cond="$widget_info->section_background_color != ''">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 section-heading text-center">
+				<h2 class="to-animate">{$widget_info->section_title}</h2>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 subtext to-animate">
+						<h3>
+							{nl2br($widget_info->section_content)}
+						</h3>
+					</div>
+				</div>
+			</div>
+
+			<!--@foreach($widget_info->content_items as $key => $item)-->
+			<div class="col-md-8 to-animate">
+				<img src="{$item->getRealImage()}" class="img-responsive img-rounded">
+			</div>
+			<div class="col-md-4 to-animate">
+				<h2>{$item->getTitle($widget_info->subject_cut_size)}</h2>
+				{nl2br($item->getContent())}
+				<p>
+					<a cond="$widget_info->use_about_button === 'Y'" href="{$widget_info->about_button_link}" target="_blank"|cond="$widget_info->about_button_new_window" class="fh5co-btn fh5co-btn-primary">
+						{$widget_info->about_button_name}
+					</a>
+				</p>
+			</div>
+
+			<!--@end-->
+		</div>
+	</div>
+</div>

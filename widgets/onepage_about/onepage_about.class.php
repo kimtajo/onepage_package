@@ -6,7 +6,7 @@
  * @brief widget to display content
  * @version 0.1
  */
-class onepage_work extends WidgetHandler
+class onepage_about extends WidgetHandler
 {
 	/**
 	 * @brief Widget handler
@@ -20,14 +20,14 @@ class onepage_work extends WidgetHandler
 		// Targets to sort
 		if(!in_array($args->order_target, array('regdate','update_order'))) $args->order_target = 'regdate';
 		// Sort order
-		if(!in_array($args->order_type, array('asc','desc'))) $args->order_type = 'asc';
-		// The number of displayed lists
-		$args->list_count = (int)$args->list_count;
-		if(!$args->list_count) $args->list_count = 9;
+		if(!in_array($args->order_type, array('asc','desc'))) $args->order_type = 'desc';
+
 		// Cut the length of the title
 		if(!$args->subject_cut_size) $args->subject_cut_size = 0;
 		// Cut the length of contents
-		if(!$args->content_cut_size) $args->content_cut_size = 100;
+		if(!$args->content_cut_size) $args->content_cut_size = 1000;
+
+
 
 
 		// Set variables used internally
@@ -40,7 +40,7 @@ class onepage_work extends WidgetHandler
 		if(!$args->module_srls)
 		{
 			$obj->site_srl = (int)$site_module_info->site_srl;
-			$output = executeQueryArray('widgets.onepage_work.getMids', $obj);
+			$output = executeQueryArray('widgets.onepage_about.getMids', $obj);
 			if($output->data)
 			{
 				foreach($output->data as $key => $val)
@@ -58,7 +58,7 @@ class onepage_work extends WidgetHandler
 		else
 		{
 			$obj->module_srls = $args->module_srls;
-			$output = executeQueryArray('widgets.onepage_work.getMids', $obj);
+			$output = executeQueryArray('widgets.onepage_about.getMids', $obj);
 			if($output->data)
 			{
 				foreach($output->data as $key => $val)
@@ -94,7 +94,6 @@ class onepage_work extends WidgetHandler
 	{
 		// Get model object from the document module
 		$oDocumentModel = getModel('document');
-		$oTagModel = getModel('tag');
 		$oFileModel = getModel('file');
 
 		$obj = new stdClass();
@@ -111,9 +110,8 @@ class onepage_work extends WidgetHandler
 		{
 			$obj->order_type = $args->order_type=="desc"?"desc":"asc";
 		}
-		$obj->list_count = $args->list_count;
 		$obj->statusList = array('PUBLIC');
-		$output = executeQueryArray('widgets.onepage_work.getNewestDocuments', $obj);
+		$output = executeQueryArray('widgets.onepage_about.getNewestDocuments', $obj);
 		if(!$output->toBool() || !$output->data) return;
 		// If the result exists, make each document as an object
 		$content_items = array();
@@ -134,22 +132,14 @@ class onepage_work extends WidgetHandler
 				$oDocument = $GLOBALS['XE_DOCUMENT_LIST'][$document_srls[$i]];
 				$document_srl = $oDocument->document_srl;
 				$module_srl = $oDocument->get('module_srl');
-				$content_item = new onepageWorkItem( $args->module_srls_info[$module_srl]->browser_title );
+				$content_item = new onepageAboutItem( $args->module_srls_info[$module_srl]->browser_title );
+				$content_item->adds($oDocument->getObjectVars());
 				$content_item->add('original_content', $oDocument->get('content'));
 				$content_item->setTitle(htmlspecialchars($oDocument->getTitleText()));
 				$content_item->setContent($oDocument->getSummary($args->content_cut_size));
-				$content_item->setLink( getSiteUrl('','','document_srl',$document_srl) );
-				$output = $oTagModel->getDocumentsTagList($oDocument);
-				if(!$output->toBool() || !$output->data) $tags = '';
-				else $tags = $output->data;
-
-				$content_item->setTags($tags);
-
-
-				$content_item->add('mid', $args->mid_lists[$module_srl]);
 				$files = $oFileModel->getFiles($document_srl);
 				$content_item->setFirstFile($files, $this->widget_path, $args->skin);
-
+				$content_item->add('mid', $args->mid_lists[$module_srl]);
 				$content_items[] = $content_item;
 			}
 
@@ -161,21 +151,17 @@ class onepage_work extends WidgetHandler
 		return $content_items;
 	}
 
-	
 	function _compile($args,$content_items)
 	{
 		$oTemplate = &TemplateHandler::getInstance();
 		// Set variables for widget
 		$widget_info = new stdClass();
 		$widget_info->modules_info = $args->modules_info;
-		$widget_info->list_count = $args->list_count;
 		$widget_info->subject_cut_size = $args->subject_cut_size;
 		$widget_info->content_cut_size = $args->content_cut_size;
- 		$widget_info->new_window = $args->new_window;
+		$widget_info->new_window = $args->new_window;
 
 		$widget_info->mid_lists = $args->mid_lists;
-
-		$widget_info->show_browser_title = $args->show_browser_title;
 
 		$widget_info->section_title = $args->section_title;
 		$widget_info->section_content = $args->section_content;
@@ -185,7 +171,7 @@ class onepage_work extends WidgetHandler
 
 		$widget_info->content_items = $content_items;
 
-		
+
 		unset($args->modules_info);
 
 		Context::set('colorset', $args->colorset);
@@ -196,19 +182,17 @@ class onepage_work extends WidgetHandler
 	}
 }
 
-class onepageWorkItem extends Object
+class onepageAboutItem extends Object
 {
 	var $browser_title = null;
+	var $contents_link = null;
+	var $domain = null;
 
-	function onepageWorkItem($browser_title='')
+	function onepageAboutItem($browser_title='')
 	{
 		$this->browser_title = $browser_title;
 	}
 
-	function setLink($url)
-	{
-		$this->add('url', strip_tags($url));
-	}
 	function setTitle($title)
 	{
 		$this->add('title', strip_tags($title));
@@ -216,15 +200,6 @@ class onepageWorkItem extends Object
 	function setContent($content)
 	{
 		$this->add('content', removeHackTag($content));
-	}
-	function getBrowserTitle()
-	{
-		return $this->browser_title;
-	}
-
-	function getLink()
-	{
-		return $this->get('url');
 	}
 	function getTitle($cut_size = 0, $tail='...')
 	{
@@ -245,17 +220,10 @@ class onepageWorkItem extends Object
 		return $this->get('content');
 	}
 	function setFirstFile($files, $widget_path, $skin){
-		$this->add('firstFile', (empty($files)?sprintf('%sskins/%s/images/work_1.jpg', $widget_path, $skin):$files[0]->uploaded_filename));
+		$this->add('firstFile', (empty($files)?sprintf('%sskins/%s/images/img_1.jpg', $widget_path, $skin):$files[0]->uploaded_filename));
 	}
 	function getFirstFile(){
 		return $this->get('firstFile');
-	}
-	function setTags($tags){
-		$this->add('tags', $tags);
-
-	}
-	function getTags(){
-		return $this->get('tags');
 	}
 }
 /* End of file content.class.php */
