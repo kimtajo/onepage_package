@@ -1,0 +1,56 @@
+<div class="fh5co-work" data-section="{$widget_info->section_name}" style="background-color: {$widget_info->section_background_color};"|cond="$widget_info->section_background_color != ''">
+	<div class="container">
+		<!-- title and content -->
+		<div class="row">
+			<div class="col-md-12 section-heading text-center">
+				<h2 class="to-animate">{$widget_info->section_title}</h2>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 subtext to-animate">
+						<h3>
+							{nl2br($widget_info->section_content)}
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.title and content -->
+
+		<div class="row row-bottom-padded-sm">
+			{@$_idx=1}
+			<!--@foreach($widget_info->content_items as $key => $item)-->
+			<div class="col-md-4 col-sm-6 col-xxx-12">
+				<a href="{$item->getLink()}" target="_blank"|cond="$widget_info->new_window" class="fh5co-project-item">
+					<img src="{$item->getRealImage()}" alt="Image" class="img-responsive">
+					<div class="fh5co-text">
+						<h2>
+							<!--@if($widget_info->show_browser_title == "Y")-->
+							[{$item->getBrowserTitle()}]
+							<!--@end-->
+							{$item->getTitle($widget_info->subject_cut_size)}
+
+						</h2>
+						<hr />
+						<span>
+							<!--@if($item->getTags() != "")-->
+							<i class="xi-tags"></i>
+								<!--@foreach($item->getTags() as $key => $tag)-->
+										{$tag->tag}&nbsp;
+								<!--@end-->
+							<!--@else-->
+								No Tag
+							<!--@end-->
+						</span>
+					</div>
+				</a>
+			</div>
+				<!--@if($_idx % 3 == 0)-->
+				<div class="clearfix visible-md-block visible-lg-block"></div>
+				<!--@end-->
+				<!--@if($_idx % 2 == 0)-->
+				<div class="clearfix visible-sm-block"></div>
+				<!--@end-->
+			{@$_idx++}
+			<!--@end-->
+		</div>
+	</div>
+</div>

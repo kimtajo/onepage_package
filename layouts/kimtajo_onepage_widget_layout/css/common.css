@@ -1,0 +1,77 @@
+body,h1, h2, h3, h4, h5, h6,
+.fh5co-header #navbar li a
+
+{
+    font-family:Raleway,'나눔바른고딕',NanumBarunGothic,ng,'맑은 고딕','Malgun Gothic','돋움',Dotum,'애플 SD 산돌고딕 Neo','Apple SD Gothic Neo',AppleGothic,Helvetica,sans-serif;
+}
+
+.margin_top_10px{
+    margin-top: 10px;
+}
+
+.checkbox #warning {
+    display: none;
+    position: absolute;
+    top: 44px;
+    left: 0;
+    z-index: 100;
+    padding: 11px 15px;
+    background-color: #444
+}
+.checkbox #warning > p {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 19px
+}
+.checkbox #warning .edge {
+    position: absolute;
+    top: -7px;
+    left: 40px;
+    width: 0;
+    height: 0;
+    border-width: 0 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent #444
+}
+button.fh5co-btn{
+    height: auto !important;
+}
+
+.fh5co-header .navbar-brand-img > img {
+    height: 44px;
+    margin-top:12px;
+}
+
+
+@media screen and (max-width: 768px){
+    .fh5co-transparent-logo-image{
+        display: none !important;
+    }
+    .fh5co-logo-image{
+        display: block !important;
+    }
+}
+
+.fh5co-pricing .price{
+    font-size: 40px;
+}
+
+.fh5co-pricing .price .currency{
+    font-size: 17px;
+}
+.fh5co-testimonials .box-testimony{
+    margin-left: 1.1em;
+}
+
+.box-testimony{
+    margin: auto 0;
+}
+
+.fh5co-press-item{
+    background-size: cover !important;
+}
+
+.fh5co-pricing .price-box{
+    font-size: 13px;
+}

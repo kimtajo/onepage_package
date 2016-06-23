@@ -1,0 +1,623 @@
+{Context::addHtmlHeader('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">')}
+<load target="css/bootstrap.css" />
+<load target="css/animate.css" />
+<load target="css/icomoon.css" />
+<load target="css/simple-line-icons.css" />
+<load target="css/owl.carousel.min.css" />
+<load target="css/owl.theme.default.min.css" />
+<load target="css/magnific-popup.css" />
+<load target="css/style.css" />
+<load target="../../common/xeicon/xeicon.min.css" />
+<load target="css/font-awesome.min.css" />
+
+<load cond="$layout_info->use_color === 'pink'" target="css/pink.css" />
+<load cond="$layout_info->use_color === 'blue'" target="css/blue.css" />
+<load cond="$layout_info->use_color === 'turquoise'" target="css/turquoise.css" />
+<load cond="$layout_info->use_color === 'orange'" target="css/orange.css" />
+<load cond="$layout_info->use_color === 'lightblue'" target="css/lightblue.css" />
+<load cond="$layout_info->use_color === 'brown'" target="css/brown.css" />
+<load cond="$layout_info->use_color === 'green'" target="css/green.css" />
+<load target="css/common.css" />
+
+<load type="body" target="js/jquery.min.js" />
+<load type="body" target="js/jquery.easing.1.3.js" />
+<load type="body" target="js/bootstrap.min.js" />
+<load type="body" target="js/jquery.waypoints.min.js" />
+<load type="body" target="js/owl.carousel.min.js" />
+<load type="body" target="js/jquery.magnific-popup.min.js" />
+<load type="body" target="js/magnific-popup-options.js" />
+<load type="body" target="js/main.js" />
+
+<!-- 로고 세팅 -->
+<block cond="!$layout_info->logo_type">{@ $layout_info->logo_type = 'text'}</block>
+<block cond="!$layout_info->logo_text">{@ $layout_info->logo_text = 'TAJO'}</block>
+<!-- /.로고 세팅 -->
+
+<!--Navbar 세팅-->
+<block cond="$layout_info->nav_info == ''">{@ $nav_info = ""}</block>
+<block cond="$layout_info->nav_info">{@ $nav_info = explode("\n", $layout_info->nav_info)}</block>
+<!--/.Navbar 세팅-->
+
+<!-- 슬라이더 세팅 -->
+<block cond="!$layout_info->slider1_background_type">{@ $layout_info->slider1_background_type = 'color'}</block>
+<block cond="!$layout_info->slider1_background_color">{@ $layout_info->slider1_background_color = '#352f44'}</block>
+<block cond="!$layout_info->use_slider1_image">{@ $layout_info->use_slider1_image = 'Y'}</block>
+<block cond="!$layout_info->slider1_direction">{@ $layout_info->slider1_direction = 'left'}</block>
+<block cond="!$layout_info->slider1_header">{@ $layout_info->slider1_header = '제목을 입력하세요.'}</block>
+<block cond="!$layout_info->slider1_text">{@ $layout_info->slider1_text = '내용을 입력하세요.'}</block>
+<block cond="!$layout_info->use_slider1_button">{@ $layout_info->use_slider1_button = 'Y'}</block>
+<block cond="!$layout_info->slider1_button_name">{@ $layout_info->slider1_button_name = '버튼'}</block>
+<block cond="!$layout_info->slider1_button_link">{@ $layout_info->slider1_button_link = '#'}</block>
+
+
+<block cond="$layout_info->slider_count >= 2">
+	<block cond="!$layout_info->slider2_background_type">{@ $layout_info->slider2_background_type = 'color'}</block>
+	<block cond="!$layout_info->slider2_background_color">{@ $layout_info->slider2_background_color = '#352f44'}</block>
+	<block cond="!$layout_info->use_slider2_image">{@ $layout_info->use_slider2_image = 'Y'}</block>
+	<block cond="!$layout_info->slider2_direction">{@ $layout_info->slider2_direction = 'right'}</block>
+	<block cond="!$layout_info->slider2_header">{@ $layout_info->slider2_header = '제목을 입력하세요.'}</block>
+	<block cond="!$layout_info->slider2_text">{@ $layout_info->slider2_text = '내용을 입력하세요.'}</block>
+	<block cond="!$layout_info->use_slider2_button">{@ $layout_info->use_slider2_button = 'Y'}</block>
+	<block cond="!$layout_info->slider2_button_name">{@ $layout_info->slider2_button_name = '버튼'}</block>
+	<block cond="!$layout_info->slider2_button_link">{@ $layout_info->slider2_button_link = '#'}</block>
+</block>
+
+<block cond="$layout_info->slider_count >= 3">
+	<block cond="!$layout_info->slider3_background_type">{@ $layout_info->slider3_background_type = 'color'}</block>
+	<block cond="!$layout_info->slider3_background_color">{@ $layout_info->slider3_background_color = '#352f44'}</block>
+	<block cond="!$layout_info->use_slider3_image">{@ $layout_info->use_slider3_image = 'Y'}</block>
+	<block cond="!$layout_info->slider3_direction">{@ $layout_info->slider3_direction = 'center'}</block>
+	<block cond="!$layout_info->slider3_header">{@ $layout_info->slider3_header = '제목을 입력하세요.'}</block>
+	<block cond="!$layout_info->slider3_text">{@ $layout_info->slider3_text = '내용을 입력하세요.'}</block>
+	<block cond="!$layout_info->use_slider3_button">{@ $layout_info->use_slider3_button = 'Y'}</block>
+	<block cond="!$layout_info->slider3_button_name">{@ $layout_info->slider3_button_name = '버튼'}</block>
+	<block cond="!$layout_info->slider3_button_link">{@ $layout_info->slider3_button_link = '#'}</block>
+</block>
+
+<block cond="$layout_info->slider_count >= 4">
+	<block cond="!$layout_info->slider4_background_type">{@ $layout_info->slider4_background_type = 'color'}</block>
+	<block cond="!$layout_info->slider4_background_color">{@ $layout_info->slider4_background_color = '#352f44'}</block>
+	<block cond="!$layout_info->use_slider4_image">{@ $layout_info->use_slider4_image = 'Y'}</block>
+	<block cond="!$layout_info->slider4_direction">{@ $layout_info->slider4_direction = 'left'}</block>
+	<block cond="!$layout_info->slider4_header">{@ $layout_info->slider4_header = '제목을 입력하세요.'}</block>
+	<block cond="!$layout_info->slider4_text">{@ $layout_info->slider4_text = '내용을 입력하세요.'}</block>
+	<block cond="!$layout_info->use_slider4_button">{@ $layout_info->use_slider4_button = 'Y'}</block>
+	<block cond="!$layout_info->slider4_button_name">{@ $layout_info->slider4_button_name = '버튼'}</block>
+	<block cond="!$layout_info->slider4_button_link">{@ $layout_info->slider4_button_link = '#'}</block>
+</block>
+
+<block cond="$layout_info->slider_count >= 5">
+	<block cond="!$layout_info->slider5_background_type">{@ $layout_info->slider5_background_type = 'color'}</block>
+	<block cond="!$layout_info->slider5_background_color">{@ $layout_info->slider5_background_color = '#352f44'}</block>
+	<block cond="!$layout_info->use_slider5_image">{@ $layout_info->use_slider5_image = 'Y'}</block>
+	<block cond="!$layout_info->slider5_direction">{@ $layout_info->slider5_direction = 'right'}</block>
+	<block cond="!$layout_info->slider5_header">{@ $layout_info->slider5_header = '제목을 입력하세요.'}</block>
+	<block cond="!$layout_info->slider5_text">{@ $layout_info->slider5_text = '내용을 입력하세요.'}</block>
+	<block cond="!$layout_info->use_slider5_button">{@ $layout_info->use_slider5_button = 'Y'}</block>
+	<block cond="!$layout_info->slider5_button_name">{@ $layout_info->slider5_button_name = '버튼'}</block>
+	<block cond="!$layout_info->slider5_button_link">{@ $layout_info->slider5_button_link = '#'}</block>
+</block>
+<!-- /.슬라이더 세팅 -->
+
+
+
+<!-- Footer -->
+<block cond="!$layout_info->copyright">{@ $layout_info->copyright = '&copy; 2015 Free <a href="index.html">Crew</a>. All Rights Reserved.
+	Free HTML5 Template by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> | Images by <a href="http://pexels.com/" target="_blank">Pexels</a> &amp;  <a href="http://unsplash.com/" target="_blank">Unsplash</a>
+	Modify by KimTAJO.</p>'}
+</block>
+<block cond="!$layout_info->use_social">{@ $layout_info->use_social = 'Y'}</block>
+<block cond="$layout_info->use_social == 'Y' && !$layout_info->social_info">
+	{@ $social_data = array('xi-twitter||#', 'xi-facebook||#', 'xi-git||https://github.com/kimtajo/kimtajo_responsive_one_page')}
+</block>
+<block cond="$layout_info->social_info">
+	{@ $social_data = explode("\n", $layout_info->$social_data)}
+</block>
+<!-- /.Footer -->
+
+<!-- 포인트 색상(지정) -->
+<block cond="$layout_info->use_color === 'custom'">
+	<style>
+		a,a:hover,a:active,a:focus,#fh5co-header .navbar-brand,#fh5co-header #navbar li a:hover,#fh5co-header #navbar li.active a,#fh5co-header.navbar-fixed-top .navbar-brand,#fh5co-header.navbar-fixed-top #navbar li a:hover,#fh5co-header.navbar-fixed-top #navbar li.active a, #fh5co-header .navbar-default .brand-slogan em, #fh5co-features .fh5co-service .fh5co-icon i {color: {$layout_info->custom_color};}
+		#fh5co-header #navbar li a span:before, #fh5co-header #navbar ul > li.open > a {background-color: {$layout_info->custom_color};}
+
+		.section-heading h2:after, #fh5co-testimonials, #fh5co-testimonials .box-testimony blockquote .quote, #fh5co-pricing .price-box.popular .popular-text, #fh5co-press .fh5co-press-item .fh5co-press-text .fh5co-press-title .fh5co-border,
+		.fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after,
+		.fh5co-nav-toggle i::before, .fh5co-nav-toggle i::after,
+		.fh5co-btn.fh5co-btn-primary,
+		.fh5co-btn.fh5co-btn-primary:hover, .fh5co-btn.fh5co-btn-primary:active, .fh5co-btn.fh5co-btn-primary:focus,
+		.social li a.social-box,
+		.social li a.social-circle,
+		.social.social-box a,
+		.social.social-circle a
+		{background: {$layout_info->custom_color};}
+
+		#fh5co-pricing .price-box.popular{border-color: {$layout_info->custom_color};}
+
+		#fh5co-pricing .price-box.popular .popular-text:after
+		{border-top-color: {$layout_info->custom_color};}
+
+		.fh5co-nav-toggle i{ color:{$layout_info->custom_color}; background:{$layout_info->custom_color}; }
+	</style>
+</block>
+<!-- /.포인트 색상(지정) -->
+
+<header role="banner" class="fh5co-header">
+	<div class="container">
+		<!-- <div class="row"> -->
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<!-- Mobile Toggle Menu Button -->
+				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+				<!--@if($layout_info->logo_type == 'text')-->
+				<a class="navbar-brand" href="{getUrl('')}">
+					{$layout_info->logo_text}
+				</a>
+				<!--@else-->
+
+				<a class="navbar-brand-img" href="{getUrl('')}">
+					<!--@if(!$layout_info->transparent_logo_image)-->
+					<img src="{$layout_info->logo_image}" alt="{$layout_info->logo_text}" />
+					<!--@else-->
+					<img id="transparent_logo_image" src="{$layout_info->transparent_logo_image}" alt="{$layout_info->logo_text}" class="fh5co-transparent-logo-image" />
+					<img id="logo_image" src="{$layout_info->logo_image}" alt="{$layout_info->logo_text}" class="hidden fh5co-logo-image" />
+					<!--@end-->
+				</a>
+				<!--@end-->
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+					<!--@if($nav_info != '')-->
+						<!--@foreach($nav_info as $nav)-->
+						{@ $split_nav = explode("||", $nav)}
+						{@ $title = $split_nav[0]}
+						{@ $section = $split_nav[1]}
+						<li><a href="#" data-nav-section="{$section}"><span>{$title}</span></a></li>
+						<!--@end-->
+					<!--@end-->
+
+					<!-- 로그인 메뉴 -->
+					<li>
+						<a id="user_info" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+							<!--@if(!$is_logged)-->
+								<i class="icon-user"></i>
+							<!--@else-->
+								<i class="xi-cog"></i>
+							<!--@end-->
+						</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="user_info">
+								<!--@if(!$is_logged)-->
+								<li><a href="#" data-toggle="modal" data-target="#loginModal"><i class="xi-user-add"></i>  {$lang->cmd_login}</a></a></li>
+								<!--@else-->
+								<li><a href="{getUrl('act', 'dispMemberLogout')}"><i class="icon-logout"></i> {$lang->cmd_logout}</a></li>
+								<li cond="$logged_info->is_admin == 'Y'"><a href="{getUrl('', 'module', 'admin')}" target="_blank"><i class="xi-cog"></i> {$lang->cmd_management}</a></li>
+								<!--@end-->
+							</ul>
+					</li>
+					<!-- /.로그인 메뉴 -->
+				</ul>
+			</div>
+		</nav>
+		<!-- </div> -->
+	</div>
+</header>
+
+<div id="slider" data-section="home">
+	<div id="owl_carousel" class="owl-carousel owl-carousel-fullwidth">
+
+		<div class="item" style="background: {$layout_info->slider1_background_color};"|cond="$layout_info->slider1_background_type === 'color'" style="background-image:url({$layout_info->slider1_background_image})">
+			<div class="container" style="position: relative;">
+				<div class="row">
+					<!--@if($layout_info->slider1_direction === 'left')-->
+					<div class="col-md-7 col-sm-7">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider1_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider1_text)}
+								</h2>
+								<p cond="$layout_info->use_slider1_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider1_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider1_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<div cond="$layout_info->use_slider1_image === 'Y'" class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-1 iphone-image">
+						<div class="iphone to-animate-2">
+							<!--@if(!$layout_info->slider1_image)-->
+							<img src="images/iphone-1.png">
+							<!--@else-->
+							<img src="{$layout_info->slider1_image}">
+							<!--@end-->
+						</div>
+					</div>
+
+					<!--@else if($layout_info->slider1_direction === 'right')-->
+					<div class="col-md-7 col-md-push-1 col-md-push-5 col-sm-7 col-sm-push-1 col-sm-push-5 text-right">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider1_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider1_text)}
+								</h2>
+								<p cond="$layout_info->use_slider1_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider1_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider1_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<div cond="$layout_info->use_slider1_image === 'Y'" class="col-md-4 col-md-pull-7 col-sm-4 col-sm-pull-7 iphone-image">
+						<div class="iphone to-animate-2">
+							<!--@if(!$layout_info->slider1_image)-->
+							<img src="images/iphone-1.png">
+							<!--@else-->
+							<img src="{$layout_info->slider1_image}">
+							<!--@end-->
+						</div>
+					</div>
+
+					<!--@else-->
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider1_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider1_text)}
+								</h2>
+								<p cond="$layout_info->use_slider1_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider1_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider1_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<!--@end-->
+				</div>
+			</div>
+		</div>
+
+		<div class="item" style="background: {$layout_info->slider2_background_color};"|cond="$layout_info->slider2_background_type === 'color'" style="background-image:url({$layout_info->slider2_background_image})">
+			<div class="container" style="position: relative;">
+				<div class="row">
+					<!--@if($layout_info->slider2_direction === 'left')-->
+					<div class="col-md-7 col-sm-7">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider2_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider2_text)}
+								</h2>
+								<p cond="$layout_info->use_slider2_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider2_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider2_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<div cond="$layout_info->use_slider2_image === 'Y'" class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-1 iphone-image">
+						<div class="iphone to-animate-2">
+							<!--@if(!$layout_info->slider2_image)-->
+							<img src="images/iphone-1.png">
+							<!--@else-->
+							<img src="{$layout_info->slider2_image}">
+							<!--@end-->
+						</div>
+					</div>
+
+					<!--@else if($layout_info->slider2_direction === 'right')-->
+					<div class="col-md-7 col-md-push-1 col-md-push-5 col-sm-7 col-sm-push-1 col-sm-push-5 text-right">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider2_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider2_text)}
+								</h2>
+								<p cond="$layout_info->use_slider2_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider2_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider2_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<div cond="$layout_info->use_slider2_image === 'Y'" class="col-md-4 col-md-pull-7 col-sm-4 col-sm-pull-7 iphone-image">
+						<div class="iphone to-animate-2">
+							<!--@if(!$layout_info->slider2_image)-->
+							<img src="images/iphone-1.png">
+							<!--@else-->
+							<img src="{$layout_info->slider2_image}">
+							<!--@end-->
+						</div>
+					</div>
+
+					<!--@else-->
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider2_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider2_text)}
+								</h2>
+								<p cond="$layout_info->use_slider2_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider2_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider2_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<!--@end-->
+				</div>
+			</div>
+		</div>
+
+		<div cond="$layout_info->slider_count>=3" class="item" style="background: {$layout_info->slider3_background_color};"|cond="$layout_info->slider3_background_type === 'color'" style="background-image:url({$layout_info->slider3_background_image})">
+			<div class="container" style="position: relative;">
+				<div class="row">
+					<!--@if($layout_info->slider3_direction === 'left')-->
+					<div class="col-md-7 col-sm-7">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider3_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider3_text)}
+								</h2>
+								<p cond="$layout_info->use_slider3_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider3_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider3_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<div cond="$layout_info->use_slider3_image === 'Y'" class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-1 iphone-image">
+						<div class="iphone to-animate-2">
+							<!--@if(!$layout_info->slider3_image)-->
+							<img src="images/iphone-1.png">
+							<!--@else-->
+							<img src="{$layout_info->slider3_image}">
+							<!--@end-->
+						</div>
+					</div>
+
+					<!--@else if($layout_info->slider3_direction === 'right')-->
+					<div class="col-md-7 col-md-push-1 col-md-push-5 col-sm-7 col-sm-push-1 col-sm-push-5 text-right">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider3_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider3_text)}
+								</h2>
+								<p cond="$layout_info->use_slider3_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider3_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider3_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<div cond="$layout_info->use_slider3_image === 'Y'" class="col-md-4 col-md-pull-7 col-sm-4 col-sm-pull-7 iphone-image">
+						<div class="iphone to-animate-2">
+							<!--@if(!$layout_info->slider3_image)-->
+							<img src="images/iphone-1.png">
+							<!--@else-->
+							<img src="{$layout_info->slider3_image}">
+							<!--@end-->
+						</div>
+					</div>
+
+					<!--@else-->
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider3_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider3_text)}
+								</h2>
+								<p cond="$layout_info->use_slider3_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider3_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider3_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<!--@end-->
+				</div>
+			</div>
+		</div>
+
+		<div cond="$layout_info->slider_count>=4" class="item" style="background: {$layout_info->slider4_background_color};"|cond="$layout_info->slider4_background_type === 'color'" style="background-image:url({$layout_info->slider4_background_image})">
+			<div class="container" style="position: relative;">
+				<div class="row">
+					<!--@if($layout_info->slider4_direction === 'left')-->
+					<div class="col-md-7 col-sm-7">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider4_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider4_text)}
+								</h2>
+								<p cond="$layout_info->use_slider4_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider4_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider4_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<div cond="$layout_info->use_slider4_image === 'Y'" class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-1 iphone-image">
+						<div class="iphone to-animate-2">
+							<!--@if(!$layout_info->slider4_image)-->
+							<img src="images/iphone-1.png">
+							<!--@else-->
+							<img src="{$layout_info->slider4_image}">
+							<!--@end-->
+						</div>
+					</div>
+
+					<!--@else if($layout_info->slider4_direction === 'right')-->
+					<div class="col-md-7 col-md-push-1 col-md-push-5 col-sm-7 col-sm-push-1 col-sm-push-5 text-right">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider4_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider4_text)}
+								</h2>
+								<p cond="$layout_info->use_slider4_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider4_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider4_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<div cond="$layout_info->use_slider4_image === 'Y'" class="col-md-4 col-md-pull-7 col-sm-4 col-sm-pull-7 iphone-image">
+						<div class="iphone to-animate-2">
+							<!--@if(!$layout_info->slider4_image)-->
+							<img src="images/iphone-1.png">
+							<!--@else-->
+							<img src="{$layout_info->slider4_image}">
+							<!--@end-->
+						</div>
+					</div>
+
+					<!--@else-->
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider4_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider4_text)}
+								</h2>
+								<p cond="$layout_info->use_slider4_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider4_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider4_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<!--@end-->
+				</div>
+			</div>
+		</div>
+
+		<div cond="$layout_info->slider_count>=5" class="item" style="background: {$layout_info->slider5_background_color};"|cond="$layout_info->slider5_background_type === 'color'" style="background-image:url({$layout_info->slider5_background_image})">
+			<div class="container" style="position: relative;">
+				<div class="row">
+					<!--@if($layout_info->slider5_direction === 'left')-->
+					<div class="col-md-7 col-sm-7">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider5_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider5_text)}
+								</h2>
+								<p cond="$layout_info->use_slider5_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider5_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider5_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<div cond="$layout_info->use_slider5_image === 'Y'" class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-1 iphone-image">
+						<div class="iphone to-animate-2">
+							<!--@if(!$layout_info->slider5_image)-->
+							<img src="images/iphone-1.png">
+							<!--@else-->
+							<img src="{$layout_info->slider5_image}">
+							<!--@end-->
+						</div>
+					</div>
+
+					<!--@else if($layout_info->slider5_direction === 'right')-->
+					<div class="col-md-7 col-md-push-1 col-md-push-5 col-sm-7 col-sm-push-1 col-sm-push-5 text-right">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider5_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider5_text)}
+								</h2>
+								<p cond="$layout_info->use_slider5_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider5_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider5_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<div cond="$layout_info->use_slider5_image === 'Y'" class="col-md-4 col-md-pull-7 col-sm-4 col-sm-pull-7 iphone-image">
+						<div class="iphone to-animate-2">
+							<!--@if(!$layout_info->slider5_image)-->
+							<img src="images/iphone-1.png">
+							<!--@else-->
+							<img src="{$layout_info->slider5_image}">
+							<!--@end-->
+						</div>
+					</div>
+
+					<!--@else-->
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<div class="fh5co-owl-text-wrap">
+							<div class="fh5co-owl-text">
+								<h1 class="fh5co-lead to-animate">{$layout_info->slider5_header}</h1>
+								<h2 class="fh5co-sub-lead to-animate">
+									{nl2br($layout_info->slider5_text)}
+								</h2>
+								<p cond="$layout_info->use_slider5_button == 'Y'" class="to-animate-2"><a href="{$layout_info->slider5_button_link}" target="_blank" class="fh5co-btn fh5co-btn-primary fh5co-btn-lg">{$layout_info->slider5_button_name}</a></p>
+							</div>
+						</div>
+					</div>
+					<!--@end-->
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div id="content" class="content">
+	{$content}
+	{$nav_info}
+</div>
+
+<footer id="footer" role="contentinfo">
+	<div class="container">
+		<div class="row row-bottom-padded-sm">
+			<div class="col-md-12">
+				<p class="copyright text-center">
+				{nl2br($layout_info->copyright)}
+			</div>
+		</div>
+		<div class="row" cond="$layout_info->use_social == 'Y'">
+			<div class="col-md-12 text-center">
+				<ul class="social social-circle">
+					<!--@foreach($social_data as $social)-->
+					{@ $split_social = explode("||", $social)}
+					{@ $link = $split_social[1]}
+					{@ $icon = $split_social[0]}
+					<li><a href="{$link}" target="_blank"><i class="{$icon}"></i></a></li>
+					<!--@end-->
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">
+					{$lang->cmd_login}
+				</h4>
+			</div>
+			<div class="modal-body">
+				<form action="{getUrl()}" method="post" autocomplete="off">
+					<input type="hidden" name="act" value="procMemberLogin" />
+					<input type="hidden" name="success_return_url" value="{htmlspecialchars(getRequestUriByServerEnviroment(), ENT_COMPAT | ENT_HTML401, 'UTF-8', FALSE)}" />
+					<input type="hidden" name="xe_validator_id" value="layouts/xe_kimtajo_layout3/layout/1" />
+					<fieldset>
+						<div class="control-group">
+							<div class="input-group">
+								<div class="input-group-addon">
+									<i class="xi-user"></i>
+								</div>
+								<input type="text" class="form-control" placeholder="{$lang->user_id}" name="user_id" id="uemail" required="true" />
+							</div>
+							<div class="input-group margin_top_10px">
+								<div class="input-group-addon">
+									<i class="xi-lock"></i>
+								</div>
+								<input type="password" class="form-control" placeholder="{$lang->password}" name="password" id="upw" required="true" />
+							</div>
+						</div>
+						<div class="col-md-offset-1 checkbox">
+							<label class="chk_label" for="keepid_opt">
+								<input type="checkbox" name="keep_signed" id="keepid_opt" /> {$lang->keep_signed}
+							</label>
+							<div id="warning">
+								<p>{str_replace('\n\n', '<br />', $lang->about_keep_signed)}</p>
+								<div class="edge"></div>
+							</div>
+						</div>
+						<button type="submit" class="fh5co-btn fh5co-btn-primary fh5co-btn_submit col-sm-12">{$lang->cmd_login}</button>
+
+						<div cond="$XE_VALIDATOR_ID == 'layouts/xe_kimtajo_layout3/layout/1' && $XE_VALIDATOR_MESSAGE" class="control-group">
+							<p class="error">{$XE_VALIDATOR_MESSAGE}</p>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.Login Modal -->
+
+<script cond="($XE_VALIDATOR_ID == 'layouts/xe_kimtajo_layout3/layout/1' && $XE_VALIDATOR_MESSAGE) || ( $act == 'dispMemberLoginForm' && !$is_logged)">
+	jQuery(function () {
+		jQuery('#loginModal').modal('show');
+
+	});
+</script>
+
+<script>
+	jQuery(function() {
+		jQuery('#grade{$layout_info->section5_grade_popular}').addClass('popular');
+	});
+</script>

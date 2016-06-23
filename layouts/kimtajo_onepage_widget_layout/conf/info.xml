@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.2">
+    <title xml:lang="ko">Onepage Widget 레이아웃</title>
+    <description xml:lang="ko">fh5co-crew(Onepage) 레이아웃의 섹션을 widget으로 분리하여 사용할 수 있는 레이아웃입니다.</description>
+    <version>1.00</version>
+    <date>2016-06-22</date>
+    <author email_address="jjrrtt@naver.com" link="">
+        <name xml:lang="ko">김타조</name>
+        <name xml:lang="en">Tajo Kim</name>
+    </author>
+    <menus>
+        <menu name="global_menu" maxdepth="3" default="true">
+            <title xml:lang="ko">전역 메뉴</title>
+            <title xml:lang="en">Global Menu</title>
+        </menu>
+    </menus>
+
+    <extra_vars>
+        <group>
+            <title xml:lang="ko">기본</title>
+            <var name="use_color" type="select">
+                <title xml:lang="ko">포인트 색상</title>
+                <description xml:lang="ko">포인트가 되는 색상을 선택합니다.</description>
+                <options value="default">
+                    <title xml:lang="ko">기본</title>
+                </options>
+                <options value="pink">
+                    <title xml:lang="ko">Pink</title>
+                </options>
+                <options value="blue">
+                    <title xml:lang="ko">Blue</title>
+                </options>
+                <options value="turquoise">
+                    <title xml:lang="ko">Turquoise</title>
+                </options>
+                <options value="orange">
+                    <title xml:lang="ko">Orange</title>
+                </options>
+                <options value="lightblue">
+                    <title xml:lang="ko">Light Blue</title>
+                </options>
+                <options value="brown">
+                    <title xml:lang="ko">Brown</title>
+                </options>
+                <options value="green">
+                    <title xml:lang="ko">Green</title>
+                </options>
+                <options value="custom">
+                    <title xml:lang="ko">사용자 지정</title>
+                </options>
+            </var>
+            <var name="custom_color" type="text">
+                <title xml:lang="ko">포인트 색상(지정)</title>
+                <description xml:lang="ko">포인트 색상을 지정으로 선택하였을 경우, 값을 입력합니다.(# 포함)</description>
+            </var>
+            <var name="nav_info" type="textarea">
+                <title xml:lang="ko">Navbar 정보</title>
+                <description xml:lang="ko">navbar 정보를 입력합니다. 입력 방법은 Navbar Title||Widget Section명(ex. 자기소개||section1) 형식이며, 추가하려면 엔터를 쳐주시면 됩니다. widget 배열 순서대로 적용하시길 바랍니다.</description>
+            </var>
+        </group>
+        <group>
+            <title xml:lang="ko">로고</title>
+            <var name="logo_type" type="select">
+                <title xml:lang="ko">로고 타입</title>
+                <description xml:lang="ko">로고 타입을 선택합니다.(기본: text)</description>
+                <options value="text">
+                    <title xml:lang="ko">텍스트</title>
+                </options>
+                <options value="image">
+                    <title xml:lang="ko">이미지</title>
+                </options>
+            </var>
+            <var name="logo_text" type="text">
+                <title xml:lang="ko">로고 텍스트</title>
+            </var>
+            <var name="transparent_logo_image" type="image">
+                <title xml:lang="ko">로고 이미지(투명색)</title>
+                <description xml:lang="ko">navbar 투명색에 들어갈 로고 이미지를 선택합니다.</description>
+            </var>
+            <var name="logo_image" type="image">
+                <title xml:lang="ko">로고 이미지</title>
+                <description xml:lang="ko">navbar에 들어갈 로고 이미지를 선택합니다.</description>
+            </var>
+        </group>
+        <group>
+            <title xml:lang="ko">Slider</title>
+            <var name="slider_count" type="select">
+                <title xml:lang="ko">슬라이더 갯수</title>
+                <options value="2">
+                    <title xml:lang="ko">2개</title>
+                </options>
+                <options value="3">
+                    <title xml:lang="ko">3개</title>
+                </options>
+                <options value="4">
+                    <title xml:lang="ko">4개</title>
+                </options>
+                <options value="5">
+                    <title xml:lang="ko">5개</title>
+                </options>
+            </var>
+
+            <var name="slider1_background_type" type="select">
+                <title xml:lang="ko">슬라이더1 배경 타입</title>
+                <description xml:lang="ko">슬라이더1의 배경 타입(색상, 이미지)을 선택합니다.</description>
+                <options value="color">
+                    <title xml:lang="ko">색상</title>
+                </options>
+                <options value="image">
+                    <title xml:lang="ko">이미지</title>
+                </options>
+            </var>
+            <var name="slider1_background_color" type="text">
+                <title xml:lang="ko">슬라이더1 배경색상</title>
+                <description xml:lang="ko">슬라이더1의 배경 타입을 색상으로 선택했을 경우, 색상 코드(# 포함)를 입력합니다.(기본값: #6173f4)</description>
+            </var>
+            <var name="slider1_background_image" type="image">
+                <title xml:lang="ko">슬라이더1 배경 이미지</title>
+                <description xml:lang="ko">슬라이더1의 배경 타입을 이미지로 선택했을 경우, 이미지를 등록합니다.</description>
+            </var>
+            <var name="use_slider1_image" type="select">
+                <title xml:lang="ko">슬라이더1 삽입 이미지 사용여부</title>
+                <description xml:lang="ko">슬라이더1에 삽입될 이미지가 있는지 선택합니다.</description>
+                <options value="Y">
+                    <title xml:lang="ko">삽입</title>
+                </options>
+                <options value="N">
+                    <title xml:lang="ko">미삽입</title>
+                </options>
+            </var>
+            <var name="slider1_image" type="image">
+                <title xml:lang="ko">슬라이더1 삽입 이미지</title>
+                <description xml:lang="ko">슬라이더1에 삽입될 이미지를 등록합니다.</description>
+            </var>
+            <var name="slider1_direction" type="select">
+                <title xml:lang="ko">슬라이더1 글자 위치</title>
+                <description xml:lang="ko">슬라이더1의 글자 위치를 선택합니다.(단, 중앙일 경우 이미지 삽입이 되지 않습니다.)</description>
+                <options value="left">
+                    <title xml:lang="ko">왼쪽</title>
+                </options>
+                <options value="center">
+                    <title xml:lang="ko">중앙</title>
+                </options>
+                <options value="right">
+                    <title xml:lang="ko">오른쪽</title>
+                </options>
+            </var>
+            <var name="slider1_header" type="text">
+                <title xml:lang="ko">슬라이더1 제목</title>
+            </var>
+            <var name="slider1_text" type="textarea">
+                <title xml:lang="ko">슬라이더1 내용</title>
+                <description xml:lang="ko">슬라이더1의 내용을 입력합니다.(html 태그 적용가능, br 태그는 엔터로 입력)</description>
+            </var>
+            <var name="use_slider1_button" type="select">
+                <title xml:lang="ko">슬라이더1 버튼 사용 여부</title>
+                <options value="Y">
+                    <title xml:lang="ko">사용함</title>
+                </options>
+                <options value="N">
+                    <title xml:lang="ko">사용 안함</title>
+                </options>
+            </var>
+            <var name="slider1_button_name" type="text">
+                <title xml:lang="ko">슬라이더1 버튼 이름</title>
+            </var>
+            <var name="slider1_button_link" type="text">
+                <title xml:lang="ko">슬라이더1 링크</title>
+            </var>
+
+
+            <var name="slider2_background_type" type="select">
+                <title xml:lang="ko">슬라이더2 배경 타입</title>
+                <description xml:lang="ko">슬라이더2의 배경 타입(색상, 이미지)을 선택합니다.</description>
+                <options value="color">
+                    <title xml:lang="ko">색상</title>
+                </options>
+                <options value="image">
+                    <title xml:lang="ko">이미지</title>
+                </options>
+            </var>
+            <var name="slider2_background_color" type="text">
+                <title xml:lang="ko">슬라이더2 배경색상</title>
+                <description xml:lang="ko">슬라이더2의 배경 타입을 색상으로 선택했을 경우, 색상 코드(# 포함)를 입력합니다.(기본값: #6173f4)</description>
+            </var>
+            <var name="slider2_background_image" type="image">
+                <title xml:lang="ko">슬라이더2 배경 이미지</title>
+                <description xml:lang="ko">슬라이더2의 배경 타입을 이미지로 선택했을 경우, 이미지를 등록합니다.</description>
+            </var>
+            <var name="use_slider2_image" type="select">
+                <title xml:lang="ko">슬라이더2 삽입 이미지 사용여부</title>
+                <description xml:lang="ko">슬라이더2에 삽입될 이미지가 있는지 선택합니다.</description>
+                <options value="Y">
+                    <title xml:lang="ko">삽입</title>
+                </options>
+                <options value="N">
+                    <title xml:lang="ko">미삽입</title>
+                </options>
+            </var>
+            <var name="slider2_image" type="image">
+                <title xml:lang="ko">슬라이더2 삽입 이미지</title>
+                <description xml:lang="ko">슬라이더2에 삽입될 이미지를 등록합니다.</description>
+            </var>
+            <var name="slider2_direction" type="select">
+                <title xml:lang="ko">슬라이더2 글자 위치</title>
+                <description xml:lang="ko">슬라이더2의 글자 위치를 선택합니다.(단, 중앙일 경우 이미지 삽입이 되지 않습니다.)</description>
+                <options value="left">
+                    <title xml:lang="ko">왼쪽</title>
+                </options>
+                <options value="center">
+                    <title xml:lang="ko">중앙</title>
+                </options>
+                <options value="right">
+                    <title xml:lang="ko">오른쪽</title>
+                </options>
+            </var>
+            <var name="slider2_header" type="text">
+                <title xml:lang="ko">슬라이더2 제목</title>
+            </var>
+            <var name="slider2_text" type="textarea">
+                <title xml:lang="ko">슬라이더2 내용</title>
+                <description xml:lang="ko">슬라이더2의 내용을 입력합니다.(html 태그 적용가능, br 태그는 엔터로 입력)</description>
+            </var>
+            <var name="use_slider2_button" type="select">
+                <title xml:lang="ko">슬라이더2 버튼 사용 여부</title>
+                <options value="Y">
+                    <title xml:lang="ko">사용함</title>
+                </options>
+                <options value="N">
+                    <title xml:lang="ko">사용 안함</title>
+                </options>
+            </var>
+            <var name="slider2_button_name" type="text">
+                <title xml:lang="ko">슬라이더2 버튼 이름</title>
+            </var>
+            <var name="slider2_button_link" type="text">
+                <title xml:lang="ko">슬라이더2 링크</title>
+            </var>
+
+
+            <var name="slider3_background_type" type="select">
+                <title xml:lang="ko">슬라이더3 배경 타입</title>
+                <description xml:lang="ko">슬라이더3의 배경 타입(색상, 이미지)을 선택합니다.</description>
+                <options value="color">
+                    <title xml:lang="ko">색상</title>
+                </options>
+                <options value="image">
+                    <title xml:lang="ko">이미지</title>
+                </options>
+            </var>
+            <var name="slider3_background_color" type="text">
+                <title xml:lang="ko">슬라이더3 배경색상</title>
+                <description xml:lang="ko">슬라이더3의 배경 타입을 색상으로 선택했을 경우, 색상 코드(# 포함)를 입력합니다.(기본값: #6173f4)</description>
+            </var>
+            <var name="slider3_background_image" type="image">
+                <title xml:lang="ko">슬라이더3 배경 이미지</title>
+                <description xml:lang="ko">슬라이더3의 배경 타입을 이미지로 선택했을 경우, 이미지를 등록합니다.</description>
+            </var>
+            <var name="use_slider3_image" type="select">
+                <title xml:lang="ko">슬라이더3 삽입 이미지 사용여부</title>
+                <description xml:lang="ko">슬라이더3에 삽입될 이미지가 있는지 선택합니다.</description>
+                <options value="Y">
+                    <title xml:lang="ko">삽입</title>
+                </options>
+                <options value="N">
+                    <title xml:lang="ko">미삽입</title>
+                </options>
+            </var>
+            <var name="slider3_image" type="image">
+                <title xml:lang="ko">슬라이더3 삽입 이미지</title>
+                <description xml:lang="ko">슬라이더3에 삽입될 이미지를 등록합니다.</description>
+            </var>
+            <var name="slider3_direction" type="select">
+                <title xml:lang="ko">슬라이더3 글자 위치</title>
+                <description xml:lang="ko">슬라이더3의 글자 위치를 선택합니다.(단, 중앙일 경우 이미지 삽입이 되지 않습니다.)</description>
+                <options value="left">
+                    <title xml:lang="ko">왼쪽</title>
+                </options>
+                <options value="center">
+                    <title xml:lang="ko">중앙</title>
+                </options>
+                <options value="right">
+                    <title xml:lang="ko">오른쪽</title>
+                </options>
+            </var>
+            <var name="slider3_header" type="text">
+                <title xml:lang="ko">슬라이더3 제목</title>
+            </var>
+            <var name="slider3_text" type="textarea">
+                <title xml:lang="ko">슬라이더3 내용</title>
+                <description xml:lang="ko">슬라이더3의 내용을 입력합니다.(html 태그 적용가능, br 태그는 엔터로 입력)</description>
+            </var>
+            <var name="use_slider3_button" type="select">
+                <title xml:lang="ko">슬라이더3 버튼 사용 여부</title>
+                <options value="Y">
+                    <title xml:lang="ko">사용함</title>
+                </options>
+                <options value="N">
+                    <title xml:lang="ko">사용 안함</title>
+                </options>
+            </var>
+            <var name="slider3_button_name" type="text">
+                <title xml:lang="ko">슬라이더3 버튼 이름</title>
+            </var>
+            <var name="slider3_button_link" type="text">
+                <title xml:lang="ko">슬라이더3 링크</title>
+            </var>
+
+
+            <var name="slider4_background_type" type="select">
+                <title xml:lang="ko">슬라이더4 배경 타입</title>
+                <description xml:lang="ko">슬라이더4의 배경 타입(색상, 이미지)을 선택합니다.</description>
+                <options value="color">
+                    <title xml:lang="ko">색상</title>
+                </options>
+                <options value="image">
+                    <title xml:lang="ko">이미지</title>
+                </options>
+            </var>
+            <var name="slider4_background_color" type="text">
+                <title xml:lang="ko">슬라이더4 배경색상</title>
+                <description xml:lang="ko">슬라이더4의 배경 타입을 색상으로 선택했을 경우, 색상 코드(# 포함)를 입력합니다.(기본값: #6173f4)</description>
+            </var>
+            <var name="slider4_background_image" type="image">
+                <title xml:lang="ko">슬라이더4 배경 이미지</title>
+                <description xml:lang="ko">슬라이더4의 배경 타입을 이미지로 선택했을 경우, 이미지를 등록합니다.</description>
+            </var>
+            <var name="use_slider4_image" type="select">
+                <title xml:lang="ko">슬라이더4 삽입 이미지 사용여부</title>
+                <description xml:lang="ko">슬라이더4에 삽입될 이미지가 있는지 선택합니다.</description>
+                <options value="Y">
+                    <title xml:lang="ko">삽입</title>
+                </options>
+                <options value="N">
+                    <title xml:lang="ko">미삽입</title>
+                </options>
+            </var>
+            <var name="slider4_image" type="image">
+                <title xml:lang="ko">슬라이더4 삽입 이미지</title>
+                <description xml:lang="ko">슬라이더4에 삽입될 이미지를 등록합니다.</description>
+            </var>
+            <var name="slider4_direction" type="select">
+                <title xml:lang="ko">슬라이더4 글자 위치</title>
+                <description xml:lang="ko">슬라이더4의 글자 위치를 선택합니다.(단, 중앙일 경우 이미지 삽입이 되지 않습니다.)</description>
+                <options value="left">
+                    <title xml:lang="ko">왼쪽</title>
+                </options>
+                <options value="center">
+                    <title xml:lang="ko">중앙</title>
+                </options>
+                <options value="right">
+                    <title xml:lang="ko">오른쪽</title>
+                </options>
+            </var>
+            <var name="slider4_header" type="text">
+                <title xml:lang="ko">슬라이더4 제목</title>
+            </var>
+            <var name="slider4_text" type="textarea">
+                <title xml:lang="ko">슬라이더4 내용</title>
+                <description xml:lang="ko">슬라이더4의 내용을 입력합니다.(html 태그 적용가능, br 태그는 엔터로 입력)</description>
+            </var>
+            <var name="use_slider4_button" type="select">
+                <title xml:lang="ko">슬라이더4 버튼 사용 여부</title>
+                <options value="Y">
+                    <title xml:lang="ko">사용함</title>
+                </options>
+                <options value="N">
+                    <title xml:lang="ko">사용 안함</title>
+                </options>
+            </var>
+            <var name="slider4_button_name" type="text">
+                <title xml:lang="ko">슬라이더4 버튼 이름</title>
+            </var>
+            <var name="slider4_button_link" type="text">
+                <title xml:lang="ko">슬라이더4 링크</title>
+            </var>
+
+
+            <var name="slider5_background_type" type="select">
+                <title xml:lang="ko">슬라이더5 배경 타입</title>
+                <description xml:lang="ko">슬라이더5의 배경 타입(색상, 이미지)을 선택합니다.</description>
+                <options value="color">
+                    <title xml:lang="ko">색상</title>
+                </options>
+                <options value="image">
+                    <title xml:lang="ko">이미지</title>
+                </options>
+            </var>
+            <var name="slider5_background_color" type="text">
+                <title xml:lang="ko">슬라이더5 배경색상</title>
+                <description xml:lang="ko">슬라이더5의 배경 타입을 색상으로 선택했을 경우, 색상 코드(# 포함)를 입력합니다.(기본값: #6173f4)</description>
+            </var>
+            <var name="slider5_background_image" type="image">
+                <title xml:lang="ko">슬라이더5 배경 이미지</title>
+                <description xml:lang="ko">슬라이더5의 배경 타입을 이미지로 선택했을 경우, 이미지를 등록합니다.</description>
+            </var>
+            <var name="use_slider5_image" type="select">
+                <title xml:lang="ko">슬라이더5 삽입 이미지 사용여부</title>
+                <description xml:lang="ko">슬라이더5에 삽입될 이미지가 있는지 선택합니다.</description>
+                <options value="Y">
+                    <title xml:lang="ko">삽입</title>
+                </options>
+                <options value="N">
+                    <title xml:lang="ko">미삽입</title>
+                </options>
+            </var>
+            <var name="slider5_image" type="image">
+                <title xml:lang="ko">슬라이더5 삽입 이미지</title>
+                <description xml:lang="ko">슬라이더5에 삽입될 이미지를 등록합니다.</description>
+            </var>
+            <var name="slider5_direction" type="select">
+                <title xml:lang="ko">슬라이더5 글자 위치</title>
+                <description xml:lang="ko">슬라이더5의 글자 위치를 선택합니다.(단, 중앙일 경우 이미지 삽입이 되지 않습니다.)</description>
+                <options value="left">
+                    <title xml:lang="ko">왼쪽</title>
+                </options>
+                <options value="center">
+                    <title xml:lang="ko">중앙</title>
+                </options>
+                <options value="right">
+                    <title xml:lang="ko">오른쪽</title>
+                </options>
+            </var>
+            <var name="slider5_header" type="text">
+                <title xml:lang="ko">슬라이더5 제목</title>
+            </var>
+            <var name="slider5_text" type="textarea">
+                <title xml:lang="ko">슬라이더5 내용</title>
+                <description xml:lang="ko">슬라이더5의 내용을 입력합니다.(html 태그 적용가능, br 태그는 엔터로 입력)</description>
+            </var>
+            <var name="use_slider5_button" type="select">
+                <title xml:lang="ko">슬라이더5 버튼 사용 여부</title>
+                <options value="Y">
+                    <title xml:lang="ko">사용함</title>
+                </options>
+                <options value="N">
+                    <title xml:lang="ko">사용 안함</title>
+                </options>
+            </var>
+            <var name="slider5_button_name" type="text">
+                <title xml:lang="ko">슬라이더5 버튼 이름</title>
+            </var>
+            <var name="slider5_button_link" type="text">
+                <title xml:lang="ko">슬라이더5 링크</title>
+            </var>
+
+        </group>
+        <group>
+            <title xml:lang="ko">Footer</title>
+            <var name="copyright" type="textarea">
+                <title xml:lang="ko">Copyright</title>
+                <description xml:lang="ko">사이트 하단의 카피라이트를 입력합니다.</description>
+            </var>
+            <var name="use_social" type="select">
+                <title xml:lang="ko">SNS 버튼 사용</title>
+                <description xml:lang="ko">카피라이트 하단에 SNS 버튼 사용 여부를 선택합니다.(html 태그 적용가능, br 태그는 엔터로 입력)</description>
+                <options value="Y">
+                    <title xml:lang="ko">사용</title>
+                </options>
+                <options value="N">
+                    <title xml:lang="ko">미사용</title>
+                </options>
+            </var>
+            <var name="social_info" type="textarea">
+                <title xml:lang="ko">SNS 정보</title>
+                <description xml:lang="ko">SNS 정보를 입력합니다. 입력 방법은 아이콘모양(XEIcon, Fontawesome 사용 가능)||링크주소(ex. xi-facebook||http://facebook.com) 형식이며, 갯수를 추가하려면 엔터를 쳐주시면 됩니다.</description>
+            </var>
+        </group>
+    </extra_vars>
+</layout>
