@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget version="0.2">
+    <title xml:lang="ko">Onepage Features 위젯</title>
+	<description xml:lang="ko">Onepage Features 위젯입니다.</description>
+    <version>1.00</version>
+    <date>2016-06-27</date>
+    <author email_address="jjrrtt@naver.com" link="http://kimtajo.net/">
+        <name xml:lang="ko">김타조</name>
+    </author>
+    <extra_vars>
+        <group>
+            <title xml:lang="ko">기본설정</title>
+            <var id="section_title" type="text">
+                <name xml:lang="ko">섹션 제목</name>
+            </var>
+            <var id="section_content" type="textarea">
+                <name xml:lang="ko">섹션 설명</name>
+                <description xml:lang="ko">해당 섹션의 설명을 입력합니다.(html 태그 적용가능, br 태그는 엔터로 입력)</description>
+            </var>
+	        <var id="section_name" type="text">
+		        <name xml:lang="ko">섹션명</name>
+		        <name xml:lang="en">Section Name</name>
+		        <description xml:lang="ko">layout에서 해당 위젯을 식별할 섹션명을 입력합니다.</description>
+	        </var>
+	        <var id="section_background_color" type="text">
+		        <name xml:lang="ko">섹션 배경색</name>
+		        <name xml:lang="en">Section Background Color</name>
+		        <description xml:lang="ko">해당 섹션의 배경색을 입력합니다.(기본: #f4f4f4, #까지 입력하세요.)</description>
+	        </var>
+        </group>
+	    <group>
+		    <title xml:lang="ko">정보 입력</title>
+		    <var id="features_count" type="select">
+			    <name xml:lang="ko">갯수 선택</name>
+			    <description xml:lang="ko">갯수를 선택합니다.</description>
+			    <options>
+				    <value>3</value>
+				    <name xml:lang="ko">3개</name>
+			    </options>
+			    <options>
+				    <value>6</value>
+				    <name xml:lang="ko">6개</name>
+			    </options>
+		    </var>
+		    <var name="features_sub1_icon" type="text">
+			    <title xml:lang="ko">서브 1 아이콘</title>
+			    <description xml:lang="ko">서브 1 아이콘 모양을 입력합니다.(기본값: fa fa-book, Font Awesome(fa fa-icon 형식으로 작성), XEIcon(xi-icon 형식으로 작성) 지원)</description>
+		    </var>
+		    <var name="features_sub1_title" type="text">
+			    <title xml:lang="ko">서브 1 제목</title>
+			    <description xml:lang="ko">서브 1 제목을 입력합니다.</description>
+		    </var>
+		    <var name="features_sub1_content" type="textarea">
+			    <title xml:lang="ko">서브 1 내용</title>
+			    <description xml:lang="ko">서브 1 내용을 입력합니다.</description>
+		    </var>
+
+		    <var name="features_sub2_icon" type="text">
+			    <title xml:lang="ko">서브 2 아이콘</title>
+			    <description xml:lang="ko">서브 2 아이콘 모양을 입력합니다.(기본값: xi-sitemap, Font Awesome(fa fa-icon 형식으로 작성), XEIcon(xi-icon 형식으로 작성) 지원)</description>
+		    </var>
+		    <var name="features_sub2_title" type="text">
+			    <title xml:lang="ko">서브 2 제목</title>
+			    <description xml:lang="ko">서브 2 제목을 입력합니다.</description>
+		    </var>
+		    <var name="features_sub2_content" type="textarea">
+			    <title xml:lang="ko">서브 2 내용</title>
+			    <description xml:lang="ko">서브 2 내용을 입력합니다.</description>
+		    </var>
+
+		    <var name="features_sub3_icon" type="text">
+			    <title xml:lang="ko">서브 3 아이콘</title>
+			    <description xml:lang="ko">서브 3 아이콘 모양을 입력합니다.(기본값: fa fa-cloud, Font Awesome(fa fa-icon 형식으로 작성), XEIcon(xi-icon 형식으로 작성) 지원)</description>
+		    </var>
+		    <var name="features_sub3_title" type="text">
+			    <title xml:lang="ko">서브 3 제목</title>
+			    <description xml:lang="ko">서브 3 제목을 입력합니다.</description>
+		    </var>
+		    <var name="features_sub3_content" type="textarea">
+			    <title xml:lang="ko">서브 3 내용</title>
+			    <description xml:lang="ko">서브 3 내용을 입력합니다.</description>
+		    </var>
+
+		    <var name="features_sub4_icon" type="text">
+			    <title xml:lang="ko">서브 4 아이콘</title>
+			    <description xml:lang="ko">서브 4 아이콘 모양을 입력합니다.(기본값: fa fa-bolt, Font Awesome(fa fa-icon 형식으로 작성), XEIcon(xi-icon 형식으로 작성) 지원)</description>
+		    </var>
+		    <var name="features_sub4_title" type="text">
+			    <title xml:lang="ko">서브 4 제목</title>
+			    <description xml:lang="ko">서브 4 제목을 입력합니다.</description>
+		    </var>
+		    <var name="features_sub4_content" type="textarea">
+			    <title xml:lang="ko">서브 4 내용</title>
+			    <description xml:lang="ko">서브 4 내용을 입력합니다.</description>
+		    </var>
+
+		    <var name="features_sub5_icon" type="text">
+			    <title xml:lang="ko">서브 5 아이콘</title>
+			    <description xml:lang="ko">서브 5 아이콘 모양을 입력합니다.(기본값: xi-paper, Font Awesome(fa fa-icon 형식으로 작성), XEIcon(xi-icon 형식으로 작성) 지원)</description>
+		    </var>
+		    <var name="features_sub5_title" type="text">
+			    <title xml:lang="ko">서브 5 제목</title>
+			    <description xml:lang="ko">서브 5 제목을 입력합니다.</description>
+		    </var>
+		    <var name="features_sub5_content" type="textarea">
+			    <title xml:lang="ko">서브 5 내용</title>
+			    <description xml:lang="ko">서브 5 내용을 입력합니다.</description>
+		    </var>
+
+		    <var name="features_sub6_icon" type="text">
+			    <title xml:lang="ko">서브 6 아이콘</title>
+			    <description xml:lang="ko">서브 6 아이콘 모양을 입력합니다.(기본값: fa fa-magnet, Font Awesome(fa fa-icon 형식으로 작성), XEIcon(xi-icon 형식으로 작성) 지원)</description>
+		    </var>
+		    <var name="features_sub6_title" type="text">
+			    <title xml:lang="ko">서브 6 제목</title>
+			    <description xml:lang="ko">서브 6 제목을 입력합니다.</description>
+		    </var>
+		    <var name="features_sub6_content" type="textarea">
+			    <title xml:lang="ko">서브 6 내용</title>
+			    <description xml:lang="ko">서브 6 내용을 입력합니다.</description>
+		    </var>
+
+		    <var name="use_features_button" type="select">
+			    <title xml:lang="ko">버튼 사용 여부</title>
+			    <options>
+				    <value>Y</value>
+				    <name xml:lang="ko">사용함</name>
+			    </options>
+			    <options>
+				    <value>N</value>
+				    <name xml:lang="ko">사용 안함</name>
+			    </options>
+		    </var>
+		    <var name="features_button_name" type="text">
+			    <title xml:lang="ko">섹션 3 버튼 이름</title>
+		    </var>
+		    <var name="features_button_link" type="text">
+			    <title xml:lang="ko">섹션 3 링크</title>
+		    </var>
+	    </group>
+    </extra_vars>
+</widget>
