@@ -1,19 +1,6 @@
 <?php
-/* Copyright (C) NAVER <http://www.navercorp.com> */
-/**
- * @class content
- * @author NAVER (developers@xpressengine.com)
- * @brief widget to display content
- * @version 0.1
- */
 class onepage_service extends WidgetHandler
 {
-	/**
-	 * @brief Widget handler
-	 *
-	 * Get extra_vars declared in ./widgets/widget/conf/info.xml as arguments
-	 * After generating the result, do not print but return it.
-	 */
 
 	function proc($args)
 	{
@@ -115,5 +102,3 @@ class onepage_service extends WidgetHandler
 		return $oTemplate->compile($tpl_path, "content");
 	}
 }
-/* End of file content.class.php */
-/* Location: ./widgets/content/content.class.php */

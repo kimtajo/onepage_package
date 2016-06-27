@@ -1,35 +1,89 @@
-<div class="fh5co-about-us" data-section="{$widget_info->section_name}" style="background-color: {$widget_info->section_background_color};"|cond="$widget_info->section_background_color != ''">
+<div class="fh5co-testimonials" data-section="{$widget_info->section_name}" style="background-color: {$widget_info->section_background_color};"|cond="$widget_info->section_background_color != ''">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 section-heading text-center">
-				<h2 class="to-animate">{$widget_info->section_title}</h2>
-			</div>
-
-			<div class="col-md-12">
-				<!--@if(($widget_info->list_count)%4 == 0)-->
-					{@$_col_md='col-md-3'}
-				<!--@elseif(($widget_info->list_count)%3 == 0)-->
-					{@$_col_md='col-md-4'}
-				<!--@elseif(($widget_info->list_count)%2 == 0)-->
-					{@$_col_md='col-md-6'}
-				<!--@else-->
-					{@$_col_md='col-md-offset-3 col-md-6'}
-				<!--@end-->
-				<div class="row">
-				<!--@foreach($widget_info->content_items as $key => $item)-->
-				<div class="text-center to-animate {$_col_md} fadeInUp animated">
-					<div class="person">
-						<img src="{$item->getThumbnail()}" class="img-responsive img-rounded" alt="Person">
-						<h3 class="name">{$item->getTitle($widget_info->subject_cut_size)}</h3>
-						<div class="position">{$item->getSubTitle()}</div>
-						<p>
-							{nl2br($item->getContent())}
-						</p>
+			        <h2 class="to-animate">{$widget_info->section_title}</h2>
+			        <div class="row">
+                        <div class="col-md-8 col-md-offset-2 subtext to-animate">
+			                <h3>{$widget_info->section_content}</h3>
+			    		</div>
 					</div>
 				</div>
-				<!--@end-->
-				</div>
 			</div>
-		</div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="box-testimony to-animate">
+                    <blockquote>
+                        <span class="quote"><span><i class="{$widget_info->testimonial_sub1_icon}"></i></span></span>
+                        <p>&ldquo;{nl2br($widget_info->testimonial_sub1_content)}&rdquo;</p>
+                    </blockquote>
+                    <p class="author">
+                        {$widget_info->testimonial_sub1_name}
+                        <span class="subtext">{$widget_info->testimonial_sub1_info}</span>
+                    </p>
+                </div>
+                <!--@if($widget_info->testimonial_count == 6)-->
+                <div class="box-testimony to-animate">
+                    <blockquote>
+                        <span class="quote"><span><i class="{$widget_info->testimonial_sub4_icon}"></i></span></span>
+                        <p>&ldquo;{nl2br($widget_info->testimonial_sub4_content)}&rdquo;</p>
+                    </blockquote>
+                    <p class="author">
+                        {$widget_info->testimonial_sub4_name}
+                        <span class="subtext">{$widget_info->testimonial_sub4_info}</span>
+                    </p>
+                </div>
+                <!--@end-->
+            </div>
+            <div class="col-md-4">
+                <div class="box-testimony to-animate">
+                    <blockquote>
+                        <span class="quote"><span><i class="{$widget_info->testimonial_sub2_icon}"></i></span></span>
+                        <p>&ldquo;{nl2br($widget_info->testimonial_sub2_content)}&rdquo;</p>
+                    </blockquote>
+                    <p class="author">
+                        {$widget_info->testimonial_sub2_name}
+                        <span class="subtext">{$widget_info->testimonial_sub2_info}</span>
+                    </p>
+                </div>
+                <!--@if($widget_info->testimonial_count == 6)-->
+                <div class="box-testimony to-animate">
+                    <blockquote>
+                        <span class="quote"><span><i class="{$widget_info->testimonial_sub5_icon}"></i></span></span>
+                        <p>&ldquo;{nl2br($widget_info->testimonial_sub5_content)}&rdquo;</p>
+                    </blockquote>
+                    <p class="author">
+                        {$widget_info->testimonial_sub5_name}
+                        <span class="subtext">{$widget_info->testimonial_sub5_info}</span>
+                    </p>
+                </div>
+                <!--@end-->
+            </div>
+            <div class="col-md-4">
+                <div class="box-testimony to-animate">
+                    <blockquote>
+                        <span class="quote"><span><i class="{$widget_info->testimonial_sub3_icon}"></i></span></span>
+                        <p>&ldquo;{nl2br($widget_info->testimonial_sub3_content)}&rdquo;</p>
+                    </blockquote>
+                    <p class="author">
+                        {$widget_info->testimonial_sub3_name}
+                        <span class="subtext">{$widget_info->testimonial_sub3_info}</span>
+                    </p>
+                </div>
+                <!--@if($widget_info->testimonial_count == 6)-->
+                <div class="box-testimony to-animate">
+                    <blockquote>
+                        <span class="quote"><span><i class="{$widget_info->testimonial_sub6_icon}"></i></span></span>
+                        <p>&ldquo;{nl2br($widget_info->testimonial_sub6_content)}&rdquo;</p>
+                    </blockquote>
+                    <p class="author">
+                        {$widget_info->testimonial_sub6_name}
+                        <span class="subtext">{$widget_info->testimonial_sub6_info}</span>
+                    </p>
+                </div>
+                <!--@end-->
+            </div>
+        </div>
 	</div>
 </div>

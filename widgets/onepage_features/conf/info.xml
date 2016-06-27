@@ -132,10 +132,10 @@
 			    </options>
 		    </var>
 		    <var name="features_button_name" type="text">
-			    <title xml:lang="ko">섹션 3 버튼 이름</title>
+			    <title xml:lang="ko">버튼 이름</title>
 		    </var>
 		    <var name="features_button_link" type="text">
-			    <title xml:lang="ko">섹션 3 링크</title>
+			    <title xml:lang="ko">버튼 링크</title>
 		    </var>
 	    </group>
     </extra_vars>

@@ -1,19 +1,6 @@
 <?php
-/* Copyright (C) NAVER <http://www.navercorp.com> */
-/**
- * @class content
- * @author NAVER (developers@xpressengine.com)
- * @brief widget to display content
- * @version 0.1
- */
 class onepage_team extends WidgetHandler
 {
-	/**
-	 * @brief Widget handler
-	 *
-	 * Get extra_vars declared in ./widgets/widget/conf/info.xml as arguments
-	 * After generating the result, do not print but return it.
-	 */
 
 	function proc($args)
 	{
@@ -38,7 +25,6 @@ class onepage_team extends WidgetHandler
 		$site_module_info = Context::get('site_module_info');
 
 		$obj = new stdClass();
-		// Apply to all modules in the site if a target module is not specified
 		if(!$args->module_srls)
 		{
 			$obj->site_srl = (int)$site_module_info->site_srl;
@@ -55,7 +41,6 @@ class onepage_team extends WidgetHandler
 			}
 
 			$args->modules_info = $oModuleModel->getMidList($obj);
-			// Apply to the module only if a target module is specified
 		}
 		else
 		{
@@ -82,11 +67,6 @@ class onepage_team extends WidgetHandler
 		if(!count($args->modules_info)) return Context::get('msg_not_founded');
 		$args->module_srl = implode(',',$module_srls);
 
-
-		/**
-		 * Method is separately made because content extraction, articles, comments, trackbacks, RSS and other elements exist
-		 */
-
 		$content_items = $this->_getDocumentItems($args);
 		$output = $this->_compile($args,$content_items);
 		return $output;
@@ -96,7 +76,6 @@ class onepage_team extends WidgetHandler
 	{
 		// Get model object from the document module
 		$oDocumentModel = getModel('document');
-		$oFileModel = getModel('file');
 
 		$obj = new stdClass();
 		$obj->module_srl = $args->module_srl;
@@ -134,7 +113,6 @@ class onepage_team extends WidgetHandler
 			{
 				$sub_title = $oDocument->getExtraEidValue('sub_title');
 				$oDocument = $GLOBALS['XE_DOCUMENT_LIST'][$document_srls[$i]];
-				$document_srl = $oDocument->document_srl;
 				$module_srl = $oDocument->get('module_srl');
 				$thumbnail = $oDocument->getThumbnail(150, 150, 'crop');
 
@@ -240,5 +218,3 @@ class onepageTeamItem extends Object
 		return $this->get('thumbnail');
 	}
 }
-/* End of file content.class.php */
-/* Location: ./widgets/content/content.class.php */

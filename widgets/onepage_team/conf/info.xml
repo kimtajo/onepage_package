@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget version="0.2">
     <title xml:lang="ko">Onepage Team 위젯</title>
-	<description xml:lang="ko">게시판 생성하고, 게시판 설정의 사용자 정의 탭에서 사용자 정의 이름을 sub_title을 하나 만들어준 후 사용합니다.</description>
+	<description xml:lang="ko">게시판 생성하고, 게시판 설정의 사용자 정의 탭에서 사용자 정의 이름을 sub_title로 하나 만들어준 후 사용합니다.</description>
     <version>1.00</version>
     <date>2016-06-27</date>
     <author email_address="jjrrtt@naver.com" link="http://kimtajo.net/">

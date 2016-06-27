@@ -1,0 +1,145 @@
+<div class="fh5co-pricing" data-section="{$widget_info->section_name}" style="background-color: {$widget_info->section_background_color};"|cond="$widget_info->section_background_color != ''">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 section-heading text-center">
+				<h2 class="single-animate animate-pricing-1">{$widget_info->section_title}</h2>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 subtext single-animate animate-pricing-2">
+						<h3>
+							{nl2br($widget_info->section_content)}
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<!--@if($widget_info->pricing_count == 4)-->
+			<div class="col-md-3 col-sm-6">
+				<div id="grade1" class="price-box to-animate">
+					<div class="popular-text" cond="$widget_info->pricing_grade_popular == 1">{$widget_info->pricing_popular_name}</div>
+					<h2 class="pricing-plan">{$widget_info->pricing_grade1_name}</h2>
+					<div class="price">
+						<sup class="currency"><i class="{$widget_info->pricing_grade1_money_type}"></i> </sup>{number_format($widget_info->pricing_grade1_money)}<small>/{$widget_info->pricing_grade1_pay_type}</small>
+					</div>
+					<p>{$widget_info->pricing_grade1_description}</p>
+					<hr>
+					<ul class="pricing-info">
+						<!--@foreach($widget_info->grade1_data as $data)-->
+						<li>{$data}</li>
+						<!--@end-->
+					</ul>
+					<a href="{$widget_info->pricing_grade1_button_link}" class="fh5co-btn fh5co-btn-default fh5co-btn-sm">{$widget_info->pricing_grade1_button_name}</a>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div id="grade2" class="price-box to-animate">
+					<div class="popular-text" cond="$widget_info->pricing_grade_popular == 2">{$widget_info->pricing_popular_name}</div>
+					<h2 class="pricing-plan">{$widget_info->pricing_grade2_name}</h2>
+					<div class="price">
+						<sup class="currency"><i class="{$widget_info->pricing_grade2_money_type}"></i> </sup>{number_format($widget_info->pricing_grade2_money)}<small>/{$widget_info->pricing_grade2_pay_type}</small>
+					</div>
+					<p>{$widget_info->pricing_grade2_description}</p>
+					<hr>
+					<ul class="pricing-info">
+						<!--@foreach($widget_info->grade2_data as $data)-->
+						<li>{$data}</li>
+						<!--@end-->
+					</ul>
+					<a href="{$widget_info->pricing_grade3_button_link}" class="fh5co-btn fh5co-btn-default fh5co-btn-sm">{$widget_info->pricing_grade3_button_name}</a>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 to-animate">
+				<div id="grade3" class="price-box">
+					<div class="popular-text" cond="$widget_info->pricing_grade_popular == 3">{$widget_info->pricing_popular_name}</div>
+					<h2 class="pricing-plan">{$widget_info->pricing_grade3_name}</h2>
+					<div class="price">
+						<sup class="currency"><i class="{$widget_info->pricing_grade3_money_type}"></i> </sup>{number_format($widget_info->pricing_grade3_money)}<small>/{$widget_info->pricing_grade3_pay_type}</small>
+					</div>
+					<p>{$widget_info->pricing_grade3_description}</p>
+					<hr>
+					<ul class="pricing-info">
+						<!--@foreach($widget_info->grade3_data as $data)-->
+						<li>{$data}</li>
+						<!--@end-->
+					</ul>
+					<a href="{$widget_info->pricing_grade4_button_link}" class="fh5co-btn fh5co-btn-default fh5co-btn-sm">{$widget_info->pricing_grade4_button_name}</a>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<div id="grade4" class="price-box to-animate">
+					<div class="popular-text" cond="$widget_info->pricing_grade_popular == 4">{$widget_info->pricing_popular_name}</div>
+					<h2 class="pricing-plan">{$widget_info->pricing_grade4_name}</h2>
+					<div class="price">
+						<sup class="currency"><i class="{$widget_info->pricing_grade4_money_type}"></i> </sup>{number_format($widget_info->pricing_grade4_money)}<small>/{$widget_info->pricing_grade4_pay_type}</small>
+					</div>
+					<p>{$widget_info->pricing_grade4_description}</p>
+					<hr>
+					<ul class="pricing-info">
+						<!--@foreach($widget_info->grade4_data as $data)-->
+						<li>{$data}</li>
+						<!--@end-->
+					</ul>
+					<a href="{$widget_info->pricing_grade4_button_link}" class="fh5co-btn fh5co-btn-default fh5co-btn-sm">{$widget_info->pricing_grade4_button_name}</a>
+				</div>
+			</div>
+			<!--@else-->
+			<div class="col-md-4 col-sm-12">
+				<div id="grade1" class="price-box to-animate">
+					<div class="popular-text" cond="$widget_info->pricing_grade1_popular == 1">{$widget_info->pricing_popular_name}</div>
+					<h2 class="pricing-plan">{$widget_info->pricing_grade1_name}</h2>
+					<div class="price">
+						<sup class="currency"><i class="{$widget_info->pricing_grade1_money_type}"></i> </sup>{number_format($widget_info->pricing_grade1_money)}<small>/{$widget_info->pricing_grade1_pay_type}</small>
+					</div>
+					<p>{$widget_info->pricing_grade1_description}</p>
+					<hr>
+					<ul class="pricing-info">
+						<!--@foreach($widget_info->grade1_data as $data)-->
+						<li>{$data}</li>
+						<!--@end-->
+					</ul>
+					<a href="{$widget_info->pricing_grade1_button_link}" class="fh5co-btn fh5co-btn-default fh5co-btn-sm">{$widget_info->pricing_grade1_button_name}</a>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12">
+				<div id="grade2" class="price-box to-animate">
+					<div class="popular-text" cond="$widget_info->pricing_grade2_popular == 1">{$widget_info->pricing_popular_name}</div>
+					<h2 class="pricing-plan">{$widget_info->pricing_grade2_name}</h2>
+					<div class="price">
+						<sup class="currency"><i class="{$widget_info->pricing_grade2_money_type}"></i> </sup>{number_format($widget_info->pricing_grade2_money)}<small>/{$widget_info->pricing_grade2_pay_type}</small>
+					</div>
+					<p>{$widget_info->pricing_grade2_description}</p>
+					<hr>
+					<ul class="pricing-info">
+						<!--@foreach($widget_info->grade2_data as $data)-->
+						<li>{$data}</li>
+						<!--@end-->
+					</ul>
+					<a href="{$widget_info->pricing_grade3_button_link}" class="fh5co-btn fh5co-btn-default fh5co-btn-sm">{$widget_info->pricing_grade3_button_name}</a>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12 to-animate">
+				<div id="grade3" class="price-box">
+					<div class="popular-text" cond="$widget_info->pricing_grade3_popular == 1">{$widget_info->pricing_popular_name}</div>
+					<h2 class="pricing-plan">{$widget_info->pricing_grade3_name}</h2>
+					<div class="price">
+						<sup class="currency"><i class="{$widget_info->pricing_grade3_money_type}"></i> </sup>{number_format($widget_info->pricing_grade3_money)}<small>/{$widget_info->pricing_grade3_pay_type}</small>
+					</div>
+					<p>{$widget_info->pricing_grade3_description}</p>
+					<hr>
+					<ul class="pricing-info">
+						<!--@foreach($widget_info->grade3_data as $data)-->
+						<li>{$data}</li>
+						<!--@end-->
+					</ul>
+					<a href="{$widget_info->pricing_grade4_button_link}" class="fh5co-btn fh5co-btn-default fh5co-btn-sm">{$widget_info->pricing_grade4_button_name}</a>
+				</div>
+			</div>
+			<!--@end-->
+		</div>
+	</div>
+</div>
+<script>
+	jQuery(function() {
+		jQuery('#grade{$widget_info->pricing_grade_popular}').addClass('popular');
+	});
+</script>

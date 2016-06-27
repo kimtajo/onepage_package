@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget version="0.2">
+    <title xml:lang="ko">Onepage Pricing 위젯</title>
+	<description xml:lang="ko">Onepage Pricing 위젯입니다.</description>
+    <version>1.00</version>
+    <date>2016-06-27</date>
+    <author email_address="jjrrtt@naver.com" link="http://kimtajo.net/">
+        <name xml:lang="ko">김타조</name>
+    </author>
+    <extra_vars>
+        <group>
+            <title xml:lang="ko">기본설정</title>
+            <var id="section_title" type="text">
+                <name xml:lang="ko">섹션 제목</name>
+            </var>
+            <var id="section_content" type="textarea">
+                <name xml:lang="ko">섹션 설명</name>
+                <description xml:lang="ko">해당 섹션의 설명을 입력합니다.(html 태그 적용가능, br 태그는 엔터로 입력)</description>
+            </var>
+	        <var id="section_name" type="text">
+		        <name xml:lang="ko">섹션명</name>
+		        <name xml:lang="en">Section Name</name>
+		        <description xml:lang="ko">layout에서 해당 위젯을 식별할 섹션명을 입력합니다.</description>
+	        </var>
+	        <var id="section_background_color" type="text">
+		        <name xml:lang="ko">섹션 배경색</name>
+		        <name xml:lang="en">Section Background Color</name>
+		        <description xml:lang="ko">해당 섹션의 배경색을 입력합니다.(기본: #f4f4f4, #까지 입력하세요.)</description>
+	        </var>
+        </group>
+	    <group>
+		    <title xml:lang="ko">정보 입력</title>
+		    <var id="pricing_count" type="select">
+			    <name xml:lang="ko">갯수 선택</name>
+			    <description xml:lang="ko">갯수를 선택합니다.(기본 4개)</description>
+			    <options>
+				    <value>4</value>
+				    <name xml:lang="ko">4개</name>
+			    </options>
+			    <options>
+				    <value>3</value>
+				    <name xml:lang="ko">3개</name>
+			    </options>
+		    </var>
+
+			<var name="pricing_grade_popular" type="select">
+				<name xml:lang="ko">강조 등급 선택 여부</name>
+				<description xml:lang="ko">강조 등급을 선택합니다.(기본값: 등급 3)</description>
+				<options><value>1</value>
+					<name xml:lang="ko">등급 1</name>
+				</options>
+				<options><value>2</value>
+					<name xml:lang="ko">등급 2</name>
+				</options>
+				<options><value>3</value>
+					<name xml:lang="ko">등급 3</name>
+				</options>
+				<options><value>4</value>
+					<name xml:lang="ko">등급 4</name>
+				</options>
+			</var>
+			<var name="pricing_popular_name" type="text">
+				<name xml:lang="ko">강조 문구</name>
+				<description xml:lang="ko">강조 문구를 입력합니다.(기본값: 추천)</description>
+			</var>
+
+			<var name="pricing_grade1_name" type="text">
+				<name xml:lang="ko">등급 1 이름</name>
+				<description xml:lang="ko">등급 1 이름을 입력합니다.</description>
+			</var>
+			<var name="pricing_grade1_money_type" type="text">
+				<name xml:lang="ko">등급 1 표시 금액</name>
+				<description xml:lang="ko">등급 1의 표시 금액를 입력합니다.(기본값: fa fa-won, Font Awesome(fa fa-icon 형식으로 작성), XEIcon(xi-icon 형식으로 작성) 지원)</description>
+			</var>
+			<var name="pricing_grade1_money" type="text">
+				<name xml:lang="ko">등급 1 금액</name>
+				<description xml:lang="ko">등급 1의 금액를 입력합니다.(기본값: 7,000, 자동으로 3자리수 콤마가 들어갑니다.)</description>
+			</var>
+			<var name="pricing_grade1_pay_type" type="text">
+				<name xml:lang="ko">등급 1 과금 단위</name>
+				<description xml:lang="ko">등급 1의 과금 단위를 입력합니다.(기본값: 월)</description>
+			</var>
+			<var name="pricing_grade1_description" type="text">
+				<name xml:lang="ko">등급 1 간단설명</name>
+				<description xml:lang="ko">등급 1의 간단설명을 입력합니다.</description>
+			</var>
+			<var name="pricing_grade1_detail" type="textarea">
+				<name xml:lang="ko">등급 1 자세한 정보</name>
+				<description xml:lang="ko">등급 1의 자세한 정보을 입력합니다.(리스트로 출력되며, 엔터로 구분합니다.)</description>
+			</var>
+			<var name="use_pricing_grade1_button" type="select">
+				<name xml:lang="ko">등급 1 버튼 사용 여부</name>
+                <options>
+                    <value>Y</value>
+                    <name xml:lang="ko">사용함</name>
+                </options>
+                <options>
+                    <value>N</value>
+                    <name xml:lang="ko">사용 안함</name>
+                </options>
+			</var>
+			<var name="pricing_grade1_button_name" type="text">
+				<name xml:lang="ko">등급 1 버튼 이름</name>
+			</var>
+			<var name="pricing_grade1_button_link" type="text">
+				<name xml:lang="ko">등급 1 링크</name>
+			</var>
+
+			<var name="pricing_grade2_name" type="text">
+				<name xml:lang="ko">등급 2 이름</name>
+				<description xml:lang="ko">등급 2 이름을 입력합니다.</description>
+			</var>
+			<var name="pricing_grade2_money_type" type="text">
+				<name xml:lang="ko">등급 2 표시 금액</name>
+				<description xml:lang="ko">등급 2의 표시 금액를 입력합니다.(기본값: fa fa-won, Font Awesome(fa fa-icon 형식으로 작성), XEIcon(xi-icon 형식으로 작성) 지원)</description>
+			</var>
+			<var name="pricing_grade2_money" type="text">
+				<name xml:lang="ko">등급 2 금액</name>
+				<description xml:lang="ko">등급 2의 금액를 입력합니다.(기본값: 7,000, 자동으로 3자리수 콤마가 들어갑니다.)</description>
+			</var>
+			<var name="pricing_grade2_pay_type" type="text">
+				<name xml:lang="ko">등급 2 과금 단위</name>
+				<description xml:lang="ko">등급 2의 과금 단위를 입력합니다.(기본값: 월)</description>
+			</var>
+			<var name="pricing_grade2_description" type="text">
+				<name xml:lang="ko">등급 2 간단설명</name>
+				<description xml:lang="ko">등급 2의 간단설명을 입력합니다.</description>
+			</var>
+			<var name="pricing_grade2_detail" type="textarea">
+				<name xml:lang="ko">등급 2 자세한 정보</name>
+				<description xml:lang="ko">등급 2의 자세한 정보을 입력합니다.(리스트로 출력되며, 엔터로 구분합니다.)</description>
+			</var>
+			<var name="use_pricing_grade2_button" type="select">
+				<name xml:lang="ko">등급 2 버튼 사용 여부</name>
+                <options>
+                    <value>Y</value>
+                    <name xml:lang="ko">사용함</name>
+                </options>
+                <options>
+                    <value>N</value>
+                    <name xml:lang="ko">사용 안함</name>
+                </options>
+			</var>
+			<var name="pricing_grade2_button_name" type="text">
+				<name xml:lang="ko">등급 2 버튼 이름</name>
+			</var>
+			<var name="pricing_grade2_button_link" type="text">
+				<name xml:lang="ko">등급 2 링크</name>
+			</var>
+
+			<var name="pricing_grade3_name" type="text">
+				<name xml:lang="ko">등급 3 이름</name>
+				<description xml:lang="ko">등급 3 이름을 입력합니다.</description>
+			</var>
+			<var name="pricing_grade3_money_type" type="text">
+				<name xml:lang="ko">등급 3 표시 금액</name>
+				<description xml:lang="ko">등급 3의 표시 금액를 입력합니다.(기본값: fa fa-won, Font Awesome(fa fa-icon 형식으로 작성), XEIcon(xi-icon 형식으로 작성) 지원)</description>
+			</var>
+			<var name="pricing_grade3_money" type="text">
+				<name xml:lang="ko">등급 3 금액</name>
+				<description xml:lang="ko">등급 3의 금액를 입력합니다.(기본값: 7,000, 자동으로 3자리수 콤마가 들어갑니다.)</description>
+			</var>
+			<var name="pricing_grade3_pay_type" type="text">
+				<name xml:lang="ko">등급 3 과금 단위</name>
+				<description xml:lang="ko">등급 3의 과금 단위를 입력합니다.(기본값: 월)</description>
+			</var>
+			<var name="pricing_grade3_description" type="text">
+				<name xml:lang="ko">등급 3 간단설명</name>
+				<description xml:lang="ko">등급 3의 간단설명을 입력합니다.</description>
+			</var>
+			<var name="pricing_grade3_detail" type="textarea">
+				<name xml:lang="ko">등급 3 자세한 정보</name>
+				<description xml:lang="ko">등급 3의 자세한 정보을 입력합니다.(리스트로 출력되며, 엔터로 구분합니다.)</description>
+			</var>
+			<var name="use_pricing_grade3_button" type="select">
+				<name xml:lang="ko">등급 3 버튼 사용 여부</name>
+				<options>
+					<value>Y</value>
+					<name xml:lang="ko">사용함</name>
+				</options>
+				<options>
+					<value>N</value>
+					<name xml:lang="ko">사용 안함</name>
+				</options>
+			</var>
+			<var name="pricing_grade3_button_name" type="text">
+				<name xml:lang="ko">등급 3 버튼 이름</name>
+			</var>
+			<var name="pricing_grade3_button_link" type="text">
+				<name xml:lang="ko">등급 3 링크</name>
+			</var>
+
+			<var name="pricing_grade4_name" type="text">
+				<name xml:lang="ko">등급 4 이름</name>
+				<description xml:lang="ko">등급 4 이름을 입력합니다.</description>
+			</var>
+			<var name="pricing_grade4_money_type" type="text">
+				<name xml:lang="ko">등급 4 표시 금액</name>
+				<description xml:lang="ko">등급 4의 표시 금액를 입력합니다.(기본값: fa fa-won, Font Awesome(fa fa-icon 형식으로 작성), XEIcon(xi-icon 형식으로 작성) 지원)</description>
+			</var>
+			<var name="pricing_grade4_money" type="text">
+				<name xml:lang="ko">등급 4 금액</name>
+				<description xml:lang="ko">등급 4의 금액를 입력합니다.(기본값: 7,000, 자동으로 3자리수 콤마가 들어갑니다.)</description>
+			</var>
+			<var name="pricing_grade4_pay_type" type="text">
+				<name xml:lang="ko">등급 4 과금 단위</name>
+				<description xml:lang="ko">등급 4의 과금 단위를 입력합니다.(기본값: 월)</description>
+			</var>
+			<var name="pricing_grade4_description" type="text">
+				<name xml:lang="ko">등급 4 간단설명</name>
+				<description xml:lang="ko">등급 4의 간단설명을 입력합니다.</description>
+			</var>
+			<var name="pricing_grade4_detail" type="textarea">
+				<name xml:lang="ko">등급 4 자세한 정보</name>
+				<description xml:lang="ko">등급 4의 자세한 정보을 입력합니다.(리스트로 출력되며, 엔터로 구분합니다.)</description>
+			</var>
+			<var name="use_pricing_grade4_button" type="select">
+				<name xml:lang="ko">등급 4 버튼 사용 여부</name>
+                <options>
+                    <value>Y</value>
+                    <name xml:lang="ko">사용함</name>
+                </options>
+                <options>
+                    <value>N</value>
+                    <name xml:lang="ko">사용 안함</name>
+                </options>
+			</var>
+			<var name="pricing_grade4_button_name" type="text">
+				<name xml:lang="ko">등급 4 버튼 이름</name>
+			</var>
+			<var name="pricing_grade4_button_link" type="text">
+				<name xml:lang="ko">등급 4 링크</name>
+			</var>
+	    </group>
+    </extra_vars>
+</widget>

@@ -1,20 +1,6 @@
 <?php
-/* Copyright (C) NAVER <http://www.navercorp.com> */
-/**
- * @class content
- * @author NAVER (developers@xpressengine.com)
- * @brief widget to display content
- * @version 0.1
- */
 class onepage_work extends WidgetHandler
 {
-	/**
-	 * @brief Widget handler
-	 *
-	 * Get extra_vars declared in ./widgets/widget/conf/info.xml as arguments
-	 * After generating the result, do not print but return it.
-	 */
-
 	function proc($args)
 	{
 		// Targets to sort
@@ -36,7 +22,6 @@ class onepage_work extends WidgetHandler
 		$site_module_info = Context::get('site_module_info');
 
 		$obj = new stdClass();
-		// Apply to all modules in the site if a target module is not specified
 		if(!$args->module_srls)
 		{
 			$obj->site_srl = (int)$site_module_info->site_srl;
@@ -53,7 +38,6 @@ class onepage_work extends WidgetHandler
 			}
 
 			$args->modules_info = $oModuleModel->getMidList($obj);
-			// Apply to the module only if a target module is specified
 		}
 		else
 		{
@@ -76,14 +60,8 @@ class onepage_work extends WidgetHandler
 				}
 			}
 		}
-		// Exit if no module is found
 		if(!count($args->modules_info)) return Context::get('msg_not_founded');
 		$args->module_srl = implode(',',$module_srls);
-
-
-		/**
-		 * Method is separately made because content extraction, articles, comments, trackbacks, RSS and other elements exist
-		 */
 
 		$content_items = $this->_getDocumentItems($args);
 		$output = $this->_compile($args,$content_items);
@@ -92,7 +70,6 @@ class onepage_work extends WidgetHandler
 
 	function _getDocumentItems($args)
 	{
-		// Get model object from the document module
 		$oDocumentModel = getModel('document');
 		$oTagModel = getModel('tag');
 		$oFileModel = getModel('file');
@@ -100,7 +77,6 @@ class onepage_work extends WidgetHandler
 		$obj = new stdClass();
 		$obj->module_srl = $args->module_srl;
 
-		// Get a list of documents
 		$obj->module_srl = $args->module_srl;
 		$obj->sort_index = $args->order_target;
 		if($args->order_target == 'list_order' || $args->order_target == 'update_order')
@@ -115,7 +91,7 @@ class onepage_work extends WidgetHandler
 		$obj->statusList = array('PUBLIC');
 		$output = executeQueryArray('widgets.onepage_work.getNewestDocuments', $obj);
 		if(!$output->toBool() || !$output->data) return;
-		// If the result exists, make each document as an object
+
 		$content_items = array();
 		if(count($output->data))
 		{
@@ -258,5 +234,3 @@ class onepageWorkItem extends Object
 		return $this->get('tags');
 	}
 }
-/* End of file content.class.php */
-/* Location: ./widgets/content/content.class.php */

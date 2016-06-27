@@ -1,19 +1,6 @@
 <?php
-/* Copyright (C) NAVER <http://www.navercorp.com> */
-/**
- * @class content
- * @author NAVER (developers@xpressengine.com)
- * @brief widget to display content
- * @version 0.1
- */
 class onepage_about extends WidgetHandler
 {
-	/**
-	 * @brief Widget handler
-	 *
-	 * Get extra_vars declared in ./widgets/widget/conf/info.xml as arguments
-	 * After generating the result, do not print but return it.
-	 */
 
 	function proc($args)
 	{
@@ -79,10 +66,6 @@ class onepage_about extends WidgetHandler
 		if(!count($args->modules_info)) return Context::get('msg_not_founded');
 		$args->module_srl = implode(',',$module_srls);
 
-
-		/**
-		 * Method is separately made because content extraction, articles, comments, trackbacks, RSS and other elements exist
-		 */
 
 		$content_items = $this->_getDocumentItems($args);
 		$output = $this->_compile($args,$content_items);
@@ -225,5 +208,3 @@ class onepageAboutItem extends Object
 		return $this->get('firstFile');
 	}
 }
-/* End of file content.class.php */
-/* Location: ./widgets/content/content.class.php */
