@@ -93,6 +93,7 @@ class onepage_about extends WidgetHandler
 			$obj->order_type = $args->order_type=="desc"?"desc":"asc";
 		}
 		$obj->statusList = array('PUBLIC');
+		$obj->list_count = 1;
 		$output = executeQueryArray('widgets.onepage_about.getNewestDocuments', $obj);
 		if(!$output->toBool() || !$output->data) return;
 		// If the result exists, make each document as an object
@@ -150,6 +151,10 @@ class onepage_about extends WidgetHandler
 		$widget_info->section_name = $args->section_name;
 		$widget_info->section_background_color = $args->section_background_color;
 
+		$widget_info->use_about_button = $args->use_about_button;
+		$widget_info->about_button_name = $args->about_button_name;
+		$widget_info->about_button_link = $args->about_button_link;
+		$widget_info->new_window_button = $args->new_window_button;
 
 		$widget_info->content_items = $content_items;
 

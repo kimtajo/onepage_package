@@ -85,7 +85,7 @@
 			<!--@else-->
 			<div class="col-md-4 col-sm-12">
 				<div id="grade1" class="price-box to-animate">
-					<div class="popular-text" cond="$widget_info->pricing_grade1_popular == 1">{$widget_info->pricing_popular_name}</div>
+					<div class="popular-text" cond="$widget_info->pricing_grade_popular == 1">{$widget_info->pricing_popular_name}</div>
 					<h2 class="pricing-plan">{$widget_info->pricing_grade1_name}</h2>
 					<div class="price">
 						<sup class="currency"><i class="{$widget_info->pricing_grade1_money_type}"></i> </sup>{number_format($widget_info->pricing_grade1_money)}<small>/{$widget_info->pricing_grade1_pay_type}</small>
@@ -102,7 +102,7 @@
 			</div>
 			<div class="col-md-4 col-sm-12">
 				<div id="grade2" class="price-box to-animate">
-					<div class="popular-text" cond="$widget_info->pricing_grade2_popular == 1">{$widget_info->pricing_popular_name}</div>
+					<div class="popular-text" cond="$widget_info->pricing_grade_popular == 2">{$widget_info->pricing_popular_name}</div>
 					<h2 class="pricing-plan">{$widget_info->pricing_grade2_name}</h2>
 					<div class="price">
 						<sup class="currency"><i class="{$widget_info->pricing_grade2_money_type}"></i> </sup>{number_format($widget_info->pricing_grade2_money)}<small>/{$widget_info->pricing_grade2_pay_type}</small>
@@ -119,7 +119,7 @@
 			</div>
 			<div class="col-md-4 col-sm-12 to-animate">
 				<div id="grade3" class="price-box">
-					<div class="popular-text" cond="$widget_info->pricing_grade3_popular == 1">{$widget_info->pricing_popular_name}</div>
+					<div class="popular-text" cond="$widget_info->pricing_grade_popular == 3">{$widget_info->pricing_popular_name}</div>
 					<h2 class="pricing-plan">{$widget_info->pricing_grade3_name}</h2>
 					<div class="price">
 						<sup class="currency"><i class="{$widget_info->pricing_grade3_money_type}"></i> </sup>{number_format($widget_info->pricing_grade3_money)}<small>/{$widget_info->pricing_grade3_pay_type}</small>

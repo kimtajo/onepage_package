@@ -150,7 +150,7 @@ class onepage_work extends WidgetHandler
 		$widget_info->subject_cut_size = $args->subject_cut_size;
 		$widget_info->content_cut_size = $args->content_cut_size;
  		$widget_info->new_window = $args->new_window;
- 		$widget_info->new_window_button = $args->new_window_button;
+ 		
 
 		$widget_info->mid_lists = $args->mid_lists;
 
@@ -160,10 +160,12 @@ class onepage_work extends WidgetHandler
 		$widget_info->section_content = $args->section_content;
 		$widget_info->section_name = $args->section_name;
 		$widget_info->section_background_color = $args->section_background_color;
+		
 		$widget_info->use_work_button = $args->use_work_button;
 		$widget_info->work_button_name = $args->work_button_name;
 		$widget_info->work_button_link = $args->work_button_link;
-
+		$widget_info->new_window_button = $args->new_window_button;
+		
 		$widget_info->content_items = $content_items;
 
 		

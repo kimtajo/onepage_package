@@ -18,13 +18,14 @@
 			</div>
 			<div class="col-md-4 to-animate">
 				<h2>{$item->getTitle($widget_info->subject_cut_size)}</h2>
-				{nl2br($item->getContent())}
 				<p>
-					<a cond="$widget_info->use_about_button === 'Y'" href="{$widget_info->about_button_link}" target="_blank"|cond="$widget_info->about_button_new_window" class="fh5co-btn fh5co-btn-primary">
-						{$widget_info->about_button_name}
-					</a>
+					{nl2br($item->getContent())}
 				</p>
+				<a cond="$widget_info->use_about_button === 'Y'" href="{$widget_info->about_button_link}" target="_blank"|cond="$widget_info->new_window_button" class="fh5co-btn fh5co-btn-primary">
+					{$widget_info->about_button_name}
+				</a>
 			</div>
+
 			<!--@end-->
 		</div>
 	</div>

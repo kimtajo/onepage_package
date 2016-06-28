@@ -9,7 +9,7 @@
     </author>
     <extra_vars>
         <group>
-            <title xml:lang="ko">기본설정</title>
+            <title xml:lang="ko">기본 설정</title>
             <var id="section_title" type="text">
                 <name xml:lang="ko">섹션 제목</name>
             </var>
@@ -27,21 +27,22 @@
 		        <name xml:lang="en">Section Background Color</name>
 		        <description xml:lang="ko">해당 섹션의 배경색을 입력합니다.(기본: #fff, #까지 입력하세요.)</description>
 	        </var>
+
         </group>
 	    <group>
-		    <title xml:lang="ko">정보 입력</title>
-		    <var id="pricing_count" type="select">
-			    <name xml:lang="ko">갯수 선택</name>
-			    <description xml:lang="ko">갯수를 선택합니다.(기본 4개)</description>
-			    <options>
-				    <value>4</value>
-				    <name xml:lang="ko">4개</name>
-			    </options>
-			    <options>
-				    <value>3</value>
-				    <name xml:lang="ko">3개</name>
-			    </options>
-		    </var>
+		    <title xml:lang="ko">기본 정보 설정</title>
+			<var id="pricing_count" type="select">
+				<name xml:lang="ko">갯수 선택</name>
+				<description xml:lang="ko">갯수를 선택합니다.(기본 4개)</description>
+				<options>
+					<value>4</value>
+					<name xml:lang="ko">4개</name>
+				</options>
+				<options>
+					<value>3</value>
+					<name xml:lang="ko">3개</name>
+				</options>
+			</var>
 
 			<var name="pricing_grade_popular" type="select">
 				<name xml:lang="ko">강조 등급 선택 여부</name>
@@ -63,7 +64,9 @@
 				<name xml:lang="ko">강조 문구</name>
 				<description xml:lang="ko">강조 문구를 입력합니다.(기본값: 추천)</description>
 			</var>
-
+		</group>
+		<group>
+			<title xml:lang="ko">등급 1 설정</title>
 			<var name="pricing_grade1_name" type="text">
 				<name xml:lang="ko">등급 1 이름</name>
 				<description xml:lang="ko">등급 1 이름을 입력합니다.</description>
@@ -119,6 +122,9 @@
 					<name xml:lang="en">Open in new window</name>
 				</options>
 			</var>
+		</group>
+		<group>
+			<title xml:lang="ko">등급 2 설정</title>
 
 			<var name="pricing_grade2_name" type="text">
 				<name xml:lang="ko">등급 2 이름</name>
@@ -175,6 +181,9 @@
 					<name xml:lang="en">Open in new window</name>
 				</options>
 			</var>
+		</group>
+		<group>
+			<title xml:lang="ko">등급 3 설정</title>
 
 			<var name="pricing_grade3_name" type="text">
 				<name xml:lang="ko">등급 3 이름</name>
@@ -231,6 +240,9 @@
 					<name xml:lang="en">Open in new window</name>
 				</options>
 			</var>
+		</group>
+		<group>
+			<title xml:lang="ko">등급 4 설정</title>
 
 			<var name="pricing_grade4_name" type="text">
 				<name xml:lang="ko">등급 4 이름</name>

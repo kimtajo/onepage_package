@@ -81,3 +81,5 @@ fabric.properties
 
 # *.iml
 # modules.xml
+*.zip
+메뉴얼/
