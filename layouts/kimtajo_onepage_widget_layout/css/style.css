@@ -696,6 +696,7 @@ div{
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+    padding: 5px;
 }
 .fh5co-work .fh5co-project-item img {
   z-index: 8;

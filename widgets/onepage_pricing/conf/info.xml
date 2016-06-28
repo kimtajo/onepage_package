@@ -25,7 +25,7 @@
 	        <var id="section_background_color" type="text">
 		        <name xml:lang="ko">섹션 배경색</name>
 		        <name xml:lang="en">Section Background Color</name>
-		        <description xml:lang="ko">해당 섹션의 배경색을 입력합니다.(기본: #f4f4f4, #까지 입력하세요.)</description>
+		        <description xml:lang="ko">해당 섹션의 배경색을 입력합니다.(기본: #fff, #까지 입력하세요.)</description>
 	        </var>
         </group>
 	    <group>
@@ -105,6 +105,20 @@
 			<var name="pricing_grade1_button_link" type="text">
 				<name xml:lang="ko">등급 1 링크</name>
 			</var>
+			<var id="new_window_grade1_button" type="select">
+				<name xml:lang="ko">등급 1 버튼 링크 새창여부</name>
+				<name xml:lang="en">Link</name>
+				<options>
+					<value></value>
+					<name xml:lang="ko">현재창에서 열기</name>
+					<name xml:lang="en">Open in current window</name>
+				</options>
+				<options>
+					<value>Y</value>
+					<name xml:lang="ko">새창에서 열기</name>
+					<name xml:lang="en">Open in new window</name>
+				</options>
+			</var>
 
 			<var name="pricing_grade2_name" type="text">
 				<name xml:lang="ko">등급 2 이름</name>
@@ -146,6 +160,20 @@
 			</var>
 			<var name="pricing_grade2_button_link" type="text">
 				<name xml:lang="ko">등급 2 링크</name>
+			</var>
+			<var id="new_window_grade2_button" type="select">
+				<name xml:lang="ko">등급 2 버튼 링크 새창여부</name>
+				<name xml:lang="en">Link</name>
+				<options>
+					<value></value>
+					<name xml:lang="ko">현재창에서 열기</name>
+					<name xml:lang="en">Open in current window</name>
+				</options>
+				<options>
+					<value>Y</value>
+					<name xml:lang="ko">새창에서 열기</name>
+					<name xml:lang="en">Open in new window</name>
+				</options>
 			</var>
 
 			<var name="pricing_grade3_name" type="text">
@@ -189,6 +217,20 @@
 			<var name="pricing_grade3_button_link" type="text">
 				<name xml:lang="ko">등급 3 링크</name>
 			</var>
+			<var id="new_window_grade3_button" type="select">
+				<name xml:lang="ko">등급 3 버튼 링크 새창여부</name>
+				<name xml:lang="en">Link</name>
+				<options>
+					<value></value>
+					<name xml:lang="ko">현재창에서 열기</name>
+					<name xml:lang="en">Open in current window</name>
+				</options>
+				<options>
+					<value>Y</value>
+					<name xml:lang="ko">새창에서 열기</name>
+					<name xml:lang="en">Open in new window</name>
+				</options>
+			</var>
 
 			<var name="pricing_grade4_name" type="text">
 				<name xml:lang="ko">등급 4 이름</name>
@@ -230,6 +272,20 @@
 			</var>
 			<var name="pricing_grade4_button_link" type="text">
 				<name xml:lang="ko">등급 4 링크</name>
+			</var>
+			<var id="new_window_grade4_button" type="select">
+				<name xml:lang="ko">등급 4 버튼 링크 새창여부</name>
+				<name xml:lang="en">Link</name>
+				<options>
+					<value></value>
+					<name xml:lang="ko">현재창에서 열기</name>
+					<name xml:lang="en">Open in current window</name>
+				</options>
+				<options>
+					<value>Y</value>
+					<name xml:lang="ko">새창에서 열기</name>
+					<name xml:lang="en">Open in new window</name>
+				</options>
 			</var>
 	    </group>
     </extra_vars>

@@ -25,7 +25,7 @@
 	        <var id="section_background_color" type="text">
 		        <name xml:lang="ko">섹션 배경색</name>
 		        <name xml:lang="en">Section Background Color</name>
-		        <description xml:lang="ko">해당 섹션의 배경색을 입력합니다.(기본: #fff, #까지 입력하세요.)</description>
+		        <description xml:lang="ko">해당 섹션의 배경색을 입력합니다.(기본: 포인트 색상, #까지 입력하세요.)</description>
 	        </var>
         </group>
 		<group>

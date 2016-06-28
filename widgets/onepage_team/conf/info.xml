@@ -13,10 +13,6 @@
             <var id="section_title" type="text">
                 <name xml:lang="ko">섹션 제목</name>
             </var>
-            <var id="section_content" type="textarea">
-                <name xml:lang="ko">섹션 설명</name>
-                <description xml:lang="ko">해당 섹션의 설명을 입력합니다.(html 태그 적용가능, br 태그는 엔터로 입력)</description>
-            </var>
 	        <var id="section_name" type="text">
 		        <name xml:lang="ko">섹션명</name>
 		        <name xml:lang="en">Section Name</name>

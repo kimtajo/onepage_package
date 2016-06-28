@@ -78,6 +78,7 @@ class onepage_features extends WidgetHandler
 		$widget_info->use_features_button = $args->use_features_button;
 		$widget_info->features_button_name = $args->features_button_name;
 		$widget_info->features_button_link = $args->features_button_link;
+		$widget_info->new_window_button = $args->new_window_button;
 
 
 		Context::set('widget_info', $widget_info);

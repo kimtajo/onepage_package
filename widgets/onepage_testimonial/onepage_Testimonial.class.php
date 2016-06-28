@@ -55,31 +55,37 @@ class onepage_testimonial extends WidgetHandler
 		$widget_info->testimonial_count = $args->testimonial_count;
 
 		$widget_info->testimonial_sub1_name = $args->testimonial_sub1_name;
+		$widget_info->testimonial_sub1_icon = $args->testimonial_sub1_icon;
 		$widget_info->testimonial_sub1_sub_name = $args->testimonial_sub1_sub_name;
 		$widget_info->testimonial_sub1_info = $args->testimonial_sub1_info;
 		$widget_info->testimonial_sub1_content = $args->testimonial_sub1_content;
 
 		$widget_info->testimonial_sub2_name = $args->testimonial_sub2_name;
+		$widget_info->testimonial_sub2_icon = $args->testimonial_sub2_icon;
 		$widget_info->testimonial_sub2_sub_name = $args->testimonial_sub2_sub_name;
 		$widget_info->testimonial_sub2_info = $args->testimonial_sub2_info;
 		$widget_info->testimonial_sub2_content = $args->testimonial_sub2_content;
 
 		$widget_info->testimonial_sub3_name = $args->testimonial_sub3_name;
+		$widget_info->testimonial_sub3_icon = $args->testimonial_sub3_icon;
 		$widget_info->testimonial_sub3_sub_name = $args->testimonial_sub3_sub_name;
 		$widget_info->testimonial_sub3_info = $args->testimonial_sub3_info;
 		$widget_info->testimonial_sub3_content = $args->testimonial_sub3_content;
 
 		$widget_info->testimonial_sub4_name = $args->testimonial_sub4_name;
+		$widget_info->testimonial_sub4_icon = $args->testimonial_sub4_icon;
 		$widget_info->testimonial_sub4_sub_name = $args->testimonial_sub4_sub_name;
 		$widget_info->testimonial_sub4_info = $args->testimonial_sub4_info;
 		$widget_info->testimonial_sub4_content = $args->testimonial_sub4_content;
 
 		$widget_info->testimonial_sub5_name = $args->testimonial_sub5_name;
+		$widget_info->testimonial_sub5_icon = $args->testimonial_sub5_icon;
 		$widget_info->testimonial_sub5_sub_name = $args->testimonial_sub5_sub_name;
 		$widget_info->testimonial_sub5_info = $args->testimonial_sub5_info;
 		$widget_info->testimonial_sub5_content = $args->testimonial_sub5_content;
 
 		$widget_info->testimonial_sub6_name = $args->testimonial_sub6_name;
+		$widget_info->testimonial_sub6_icon = $args->testimonial_sub6_icon;
 		$widget_info->testimonial_sub6_sub_name = $args->testimonial_sub6_sub_name;
 		$widget_info->testimonial_sub6_info = $args->testimonial_sub6_info;
 		$widget_info->testimonial_sub6_content = $args->testimonial_sub6_content;

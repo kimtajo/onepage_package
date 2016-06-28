@@ -44,7 +44,7 @@
 		    responsiveClass: true,
 		    nav: true,
 		    dots: true,
-		    autoHeight: true,
+		    // autoHeight: true,
 		    smartSpeed: 500,
 		    autoplay: true,
 			autoplayTimeout: 5000,

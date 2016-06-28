@@ -14,7 +14,9 @@ class onepage_work extends WidgetHandler
 		if(!$args->subject_cut_size) $args->subject_cut_size = 0;
 		// Cut the length of contents
 		if(!$args->content_cut_size) $args->content_cut_size = 100;
-
+		if(!$args->use_work_button) $args->use_work_button = 'Y';
+		if(!$args->work_button_name) $args->work_button_name = '버튼';
+		if(!$args->work_button_link) $args->work_button_link = '#';
 
 		// Set variables used internally
 		$oModuleModel = getModel('module');
@@ -148,6 +150,7 @@ class onepage_work extends WidgetHandler
 		$widget_info->subject_cut_size = $args->subject_cut_size;
 		$widget_info->content_cut_size = $args->content_cut_size;
  		$widget_info->new_window = $args->new_window;
+ 		$widget_info->new_window_button = $args->new_window_button;
 
 		$widget_info->mid_lists = $args->mid_lists;
 
@@ -157,7 +160,9 @@ class onepage_work extends WidgetHandler
 		$widget_info->section_content = $args->section_content;
 		$widget_info->section_name = $args->section_name;
 		$widget_info->section_background_color = $args->section_background_color;
-
+		$widget_info->use_work_button = $args->use_work_button;
+		$widget_info->work_button_name = $args->work_button_name;
+		$widget_info->work_button_link = $args->work_button_link;
 
 		$widget_info->content_items = $content_items;
 
@@ -221,7 +226,7 @@ class onepageWorkItem extends Object
 		return $this->get('content');
 	}
 	function setFirstFile($files, $widget_path, $skin){
-		$this->add('firstFile', (empty($files)?sprintf('%sskins/%s/images/work_1.jpg', $widget_path, $skin):$files[0]->uploaded_filename));
+		$this->add('firstFile', (empty($files)?sprintf('%sskins/%s/images/no_image.png', $widget_path, $skin):$files[0]->uploaded_filename));
 	}
 	function getFirstFile(){
 		return $this->get('firstFile');

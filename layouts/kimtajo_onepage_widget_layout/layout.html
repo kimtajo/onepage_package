@@ -110,8 +110,8 @@
 <block cond="$layout_info->use_social == 'Y' && !$layout_info->social_info">
 	{@ $social_data = array('xi-twitter||#', 'xi-facebook||#', 'xi-git||https://github.com/kimtajo/kimtajo_responsive_one_page')}
 </block>
-<block cond="$layout_info->social_info">
-	{@ $social_data = explode("\n", $layout_info->$social_data)}
+<block cond="$layout_info->use_social == 'Y' && $layout_info->social_info">
+	{@ $social_data = explode("\n", $layout_info->social_info)}
 </block>
 <!-- /.Footer -->
 

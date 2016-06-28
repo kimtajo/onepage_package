@@ -74,7 +74,11 @@ class onepage_pricing extends WidgetHandler
 		$widget_info->section_name = $args->section_name;
 		$widget_info->section_background_color = $args->section_background_color;
 		$widget_info->pricing_count = $args->pricing_count;
-		
+		$widget_info->new_window_grade1_button = $args->new_window_grade1_button;
+		$widget_info->new_window_grade2_button = $args->new_window_grade2_button;
+		$widget_info->new_window_grade3_button = $args->new_window_grade3_button;
+		$widget_info->new_window_grade4_button = $args->new_window_grade4_button;
+
 		Context::set('widget_info', $widget_info);
 
 		$tpl_path = sprintf('%sskins/%s', $this->widget_path, $args->skin);
